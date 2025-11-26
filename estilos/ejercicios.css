@@ -1,0 +1,296 @@
+/* Importar estilos base */
+@import url('../css/estilos.css');
+
+/* Personalizaciones para Ejercicios */
+
+/* Header específico con gradiente verde-lima */
+header {
+    background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+}
+
+/* Secciones */
+section h2 {
+    color: #56ab2f;
+    border-bottom-color: #a8e063;
+}
+
+section h2::before {
+    content: "💪";
+    margin-right: 12px;
+}
+
+/* Tarjetas de ejercicios */
+.exercise-card {
+    background: white;
+    border-radius: 15px;
+    padding: 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(86, 171, 47, 0.1);
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    overflow: hidden;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(86, 171, 47, 0.2);
+    border-color: #a8e063;
+}
+
+/* Header del ejercicio */
+.exercise-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 1.5rem 2rem;
+    border-bottom: 3px solid #a8e063;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.exercise-header h3 {
+    color: #56ab2f;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+/* Badge de dificultad */
+.difficulty {
+    background: #56ab2f;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Contenido del ejercicio */
+.exercise-content {
+    padding: 2rem;
+}
+
+.exercise-content h4 {
+    color: #56ab2f;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.exercise-content h4:first-child {
+    margin-top: 0;
+}
+
+.exercise-content ul {
+    margin-left: 1.5rem;
+}
+
+.exercise-content li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.exercise-content li::marker {
+    color: #56ab2f;
+}
+
+.exercise-content p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Niveles de dificultad */
+.level-beginner {
+    border-left: 5px solid #4CAF50;
+}
+
+.level-beginner .difficulty {
+    background: #4CAF50;
+}
+
+.level-intermediate {
+    border-left: 5px solid #FF9800;
+}
+
+.level-intermediate .difficulty {
+    background: #FF9800;
+}
+
+.level-advanced {
+    border-left: 5px solid #F44336;
+}
+
+.level-advanced .difficulty {
+    background: #F44336;
+}
+
+/* Código inline */
+code {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 3px 7px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Tips grid */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+/* Tarjetas de tips */
+.tip-card {
+    background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 5px solid #689f38;
+    box-shadow: 0 4px 12px rgba(104, 159, 56, 0.15);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.tip-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(104, 159, 56, 0.25);
+}
+
+.tip-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.tip-card h3 {
+    color: #558b2f;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.tip-card p {
+    color: #424242;
+    margin-bottom: 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Navegación activa */
+nav a.active {
+    background-color: #56ab2f;
+    border-bottom-color: #a8e063;
+}
+
+nav a:hover {
+    background-color: #4a9629;
+    border-bottom-color: #56ab2f;
+}
+
+/* Botón de regreso */
+.btn-back {
+    background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+    box-shadow: 0 4px 15px rgba(86, 171, 47, 0.3);
+}
+
+.btn-back:hover {
+    background: linear-gradient(135deg, #4a9629 0%, #8bc34a 100%);
+    box-shadow: 0 6px 20px rgba(86, 171, 47, 0.4);
+}
+
+/* Animaciones */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.exercise-card {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.exercise-card:nth-child(1) { animation-delay: 0.05s; }
+.exercise-card:nth-child(2) { animation-delay: 0.1s; }
+.exercise-card:nth-child(3) { animation-delay: 0.15s; }
+
+/* Badge con pulso */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.difficulty {
+    animation: pulse 2s infinite;
+}
+
+.exercise-card:hover .difficulty {
+    animation: none;
+}
+
+/* Emojis en secciones */
+section:nth-of-type(1) h2::before { content: "🌱"; }
+section:nth-of-type(2) h2::before { content: "🌿"; }
+section:nth-of-type(3) h2::before { content: "🎨"; }
+section:nth-of-type(4) h2::before { content: "✨"; }
+section:nth-of-type(5) h2::before { content: "🏆"; }
+section:nth-of-type(6) h2::before { content: "💡"; }
+
+/* Scrollbar */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #56ab2f 0%, #a8e063 100%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #4a9629 0%, #8bc34a 100%);
+}
+
+/* Efectos especiales en hover */
+.exercise-header {
+    position: relative;
+    overflow: hidden;
+}
+
+.exercise-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(168, 224, 99, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.exercise-card:hover .exercise-header::before {
+    left: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .exercise-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .difficulty {
+        align-self: flex-start;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .exercise-content {
+        padding: 1.5rem;
+    }
+}

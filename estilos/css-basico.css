@@ -1,0 +1,330 @@
+/* Importar estilos base */
+@import url('../css/estilos.css');
+
+/* Personalizaciones para CSS Fundamentos */
+
+/* Header específico con gradiente naranja-rojo */
+header {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Highlight de código inline */
+code {
+    background-color: #ffe5e5;
+    color: #c0392b;
+    font-weight: 600;
+    padding: 3px 6px;
+}
+
+/* Bloques de ejemplo con tema rosa/rojo */
+.ejemplo {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe0e0 100%);
+    border-left: 5px solid #e74c3c;
+    box-shadow: 0 3px 12px rgba(231, 76, 60, 0.15);
+    position: relative;
+}
+
+.ejemplo::before {
+    content: "💡";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 1.5rem;
+}
+
+.ejemplo h4 {
+    color: #c0392b;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+/* Notas importantes con tema amarillo intenso */
+.nota {
+    background: linear-gradient(135deg, #fff9e6 0%, #ffeb99 100%);
+    border-left: 5px solid #f39c12;
+    box-shadow: 0 3px 12px rgba(243, 156, 18, 0.15);
+}
+
+.nota strong {
+    color: #d68910;
+    font-size: 1.05rem;
+}
+
+/* Tablas con tema rojo */
+table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+table th {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    padding: 1rem;
+}
+
+table tr:hover {
+    background-color: #fff5f5;
+    transform: scale(1.005);
+}
+
+table td {
+    font-weight: 500;
+    padding: 0.9rem;
+}
+
+/* Títulos de sección */
+section h2 {
+    color: #c0392b;
+    border-bottom: 3px solid #e74c3c;
+    font-size: 2.2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+section h2::before {
+    content: "📚";
+    margin-right: 15px;
+    font-size: 2rem;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #e74c3c 0%, #f5576c 100%);
+    border-radius: 2px;
+}
+
+section h3 {
+    color: #e74c3c;
+    font-size: 1.7rem;
+    margin-top: 2.5rem;
+    padding-left: 18px;
+    border-left: 5px solid #f093fb;
+}
+
+section h4 {
+    color: #e67e22;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+}
+
+/* Bloques de código con tema oscuro rojizo */
+pre {
+    background: linear-gradient(135deg, #2c1810 0%, #3d2416 100%);
+    border-left: 5px solid #e74c3c;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    position: relative;
+    padding: 1.5rem;
+}
+
+pre code {
+    color: #ffb3ba;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+}
+
+/* Etiqueta de lenguaje */
+pre::before {
+    content: "CSS3";
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Listas personalizadas */
+ul {
+    padding-left: 2.5rem;
+}
+
+ul li {
+    margin-bottom: 0.9rem;
+    position: relative;
+    line-height: 1.7;
+}
+
+ul li::before {
+    content: "►";
+    position: absolute;
+    left: -1.5rem;
+    color: #e74c3c;
+    font-size: 0.9rem;
+}
+
+ol li::marker {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+/* Checkmarks */
+ul li:has(code)::before {
+    content: "✓";
+    color: #27ae60;
+    font-weight: bold;
+}
+
+/* Enlaces */
+a:not(.btn-back):not(.active) {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+a:not(.btn-back):not(.active):hover {
+    color: #c0392b;
+    text-decoration-color: #f5576c;
+}
+
+/* Botón de regreso */
+.btn-back {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+}
+
+.btn-back:hover {
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
+}
+
+/* Navegación activa */
+nav a.active {
+    background-color: #e74c3c;
+    border-bottom-color: #f5576c;
+}
+
+nav a:hover {
+    background-color: #c0392b;
+    border-bottom-color: #f093fb;
+}
+
+/* Secciones con animación */
+section {
+    transition: all 0.4s ease;
+    border-left: 4px solid transparent;
+}
+
+section:hover {
+    transform: translateX(8px);
+    box-shadow: -6px 10px 25px rgba(231, 76, 60, 0.15);
+    border-left-color: #e74c3c;
+}
+
+/* Demo del Modelo de Caja */
+.box-model-demo {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.box-model-demo .content {
+    background: white;
+    padding: 20px;
+    border: 5px solid #e74c3c;
+    box-shadow: 0 0 0 20px rgba(241, 196, 15, 0.3);
+    border-radius: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.box-model-demo .padding,
+.box-model-demo .border,
+.box-model-demo .margin {
+    font-size: 0.85rem;
+    color: white;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff5f5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #e74c3c 0%, #c0392b 100%);
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #c0392b 0%, #a93226 100%);
+}
+
+/* Animaciones */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+section {
+    animation: slideInRight 0.6s ease-out;
+}
+
+section:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+/* Hover en ejemplos */
+.ejemplo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.25);
+}
+
+/* Emojis en títulos por sección */
+section:nth-of-type(1) h2::before { content: "🎨"; }
+section:nth-of-type(2) h2::before { content: "📦"; }
+section:nth-of-type(3) h2::before { content: "🎯"; }
+section:nth-of-type(4) h2::before { content: "✍️"; }
+section:nth-of-type(5) h2::before { content: "🔍"; }
+section:nth-of-type(6) h2::before { content: "🚀"; }
+
+/* Responsivo */
+@media (max-width: 768px) {
+    section h2 {
+        font-size: 1.7rem;
+    }
+    
+    section h3 {
+        font-size: 1.4rem;
+        padding-left: 12px;
+    }
+    
+    pre::before {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+    
+    .box-model-demo {
+        padding: 15px;
+    }
+}

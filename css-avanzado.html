@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Estilos - Tutorial HTML5 y CSS3</title>
+    <link rel="stylesheet" href="estilos/css-avanzado.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Estilos</h1>
+        <p class="subtitle">Propiedades de Texto, Fuentes, Colores y Efectos Visuales</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="html-basico.html">HTML Básico</a></li>
+            <li><a href="html-avanzado.html">HTML Avanzado</a></li>
+            <li><a href="css-fundamentos.html">CSS Fundamentos</a></li>
+            <li><a href="css-estilos.html" class="active">CSS Estilos</a></li>
+            <li><a href="recursos.html">Recursos</a></li>
+            <li><a href="ejercicios.html">Ejercicios</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- PROPIEDADES DE FUENTES -->
+    <section>
+        <h2>Propiedades de Fuentes</h2>
+        <p>CSS ofrece múltiples propiedades para controlar la apariencia del texto.</p>
+    </section>
+
+    <!-- FONT-WEIGHT -->
+    <section>
+        <h2>font-weight (Grosor del Texto)</h2>
+        <p>Controla el grosor o peso de la fuente.</p>
+
+        <h3>Valores disponibles:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Valor</th>
+                    <th>Descripción</th>
+                    <th>Equivalente Numérico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>normal</code></td>
+                    <td>Peso normal de la letra</td>
+                    <td>400</td>
+                </tr>
+                <tr>
+                    <td><code>bold</code></td>
+                    <td>Texto en negrita</td>
+                    <td>700</td>
+                </tr>
+                <tr>
+                    <td><code>lighter</code></td>
+                    <td>Más delgado que el elemento padre</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td><code>bolder</code></td>
+                    <td>Más grueso que el elemento padre</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td><code>100-900</code></td>
+                    <td>Valores numéricos (múltiplos de 100)</td>
+                    <td>100 (delgado) a 900 (negro)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="ejemplo">
+            <h4>Ejemplos:</h4>
+            <pre><code>p {
+font-weight: normal;  /* 400 */
+}
+
+h1 {
+font-weight: bold;    /* 700 */
+}
+
+.delgado {
+font-weight: 300;
+}
+
+.extra-bold {
+font-weight: 800;
+}</code></pre>
+        </div>
+
+        <div class="demo-weights">
+            <p style="font-weight: 100;">100 - Thin</p>
+            <p style="font-weight: 300;">300 - Light</p>
+            <p style="font-weight: 400;">400 - Normal</p>
+            <p style="font-weight: 500;">500 - Medium</p>
+            <p style="font-weight: 700;">700 - Bold</p>
+            <p style="font-weight: 900;">900 - Black</p>
+        </div>
+    </section>
+
+    <!-- FONT-SIZE -->
+    <section>
+        <h2>font-size (Tamaño del Texto)</h2>
+        <p>Establece el tamaño de la letra del texto.</p>
+
+        <h3>Unidades de Medida</h3>
+        
+        <h4>Unidades Absolutas:</h4>
+        <ul>
+            <li><code>px</code> (píxeles): Más común, tamaño fijo</li>
+            <li><code>pt</code> (puntos): Usado principalmente en impresión</li>
+            <li><code>cm</code>, <code>mm</code>, <code>in</code>: Medidas físicas</li>
+        </ul>
+
+        <h4>Unidades Relativas:</h4>
+        <ul>
+            <li><code>em</code>: Relativo al tamaño de fuente del elemento padre</li>
+            <li><code>rem</code>: Relativo al tamaño de fuente raíz (html)</li>
+            <li><code>%</code>: Porcentaje relativo al padre</li>
+            <li><code>vw/vh</code>: Relativo al viewport (ancho/alto de ventana)</li>
+        </ul>
+
+        <h4>Palabras Clave Absolutas:</h4>
+        <ul>
+            <li><code>xx-small</code>, <code>x-small</code>, <code>small</code></li>
+            <li><code>medium</code> (valor por defecto)</li>
+            <li><code>large</code>, <code>x-large</code>, <code>xx-large</code></li>
+        </ul>
+
+        <h4>Palabras Clave Relativas:</h4>
+        <ul>
+            <li><code>larger</code>: Más grande que el padre</li>
+            <li><code>smaller</code>: Más pequeño que el padre</li>
+        </ul>
+
+        <div class="ejemplo">
+            <h4>Ejemplos:</h4>
+            <pre><code>body {
+font-size: 16px;  /* Tamaño base */
+}
+
+h1 {
+font-size: 2.5em;  /* 2.5 veces el tamaño del padre */
+}
+
+p {
+font-size: 1rem;   /* Igual al tamaño base */
+}
+
+.pequeño {
+font-size: 12px;
+}
+
+.grande {
+font-size: x-large;
+}</code></pre>
+        </div>
+
+        <div class="nota">
+            <strong>Recomendación:</strong> Usar <code>rem</code> para mayor accesibilidad y facilidad de mantenimiento.
+        </div>
+    </section>
+
+    <!-- FONT-FAMILY -->
+    <section>
+        <h2>font-family (Tipo de Fuente)</h2>
+        <p>Establece la fuente o tipo de letra con la que se muestra el texto.</p>
+
+        <h3>Familias Genéricas</h3>
+        <ul>
+            <li><code>serif</code>: Fuentes con remates (ej: Times New Roman)</li>
+            <li><code>sans-serif</code>: Fuentes sin remates (ej: Arial, Helvetica)</li>
+            <li><code>monospace</code>: Fuentes de ancho fijo (ej: Courier)</li>
+            <li><code>cursive</code>: Fuentes que parecen escritas a mano</li>
+            <li><code>fantasy</code>: Fuentes decorativas</li>
+        </ul>
+
+        <div class="ejemplo">
+            <h4>Sintaxis con fuentes alternativas:</h4>
+            <pre><code>body {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+font-family: "Times New Roman", Times, serif;
+}
+
+code {
+font-family: "Courier New", Courier, monospace;
+}
+
+.elegante {
+font-family: Georgia, "Palatino Linotype", serif;
+}</code></pre>
+        </div>
+
+        <div class="nota">
+            <strong>Importante:</strong>
+            <ul>
+                <li>Listar fuentes en orden de prioridad</li>
+                <li>Siempre terminar con una familia genérica</li>
+                <li>Usar comillas para nombres con espacios</li>
+            </ul>
+        </div>
+
+        <h3>Fuentes Web (Google Fonts)</h3>
+        <div class="ejemplo">
+            <h4>Importar desde Google Fonts:</h4>
+            <pre><code>&lt;head&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" 
+        rel="stylesheet"&gt;
+&lt;/head&gt;</code></pre>
+
+            <h4>Usar en CSS:</h4>
+            <pre><code>body {
+font-family: 'Roboto', sans-serif;
+}</code></pre>
+        </div>
+    </section>
+
+    <!-- COLORES Y FONDOS -->
+    <section>
+        <h2>Colores en CSS</h2>
+        <p>CSS ofrece múltiples formas de especificar colores.</p>
+
+        <h3>Formatos de Color</h3>
+
+        <h4>1. Nombres de Colores</h4>
+        <div class="ejemplo">
+            <pre><code>color: red;
+background-color: blue;
+border-color: green;</code></pre>
+        </div>
+
+        <h4>2. Hexadecimal (RGB)</h4>
+        <div class="ejemplo">
+            <pre><code>color: #FF0000;        /* Rojo */
+color: #00FF00;        /* Verde */
+color: #0000FF;        /* Azul */
+color: #F00;           /* Rojo (forma corta) */</code></pre>
+        </div>
+
+        <h4>3. RGB y RGBA</h4>
+        <div class="ejemplo">
+            <pre><code>color: rgb(255, 0, 0);           /* Rojo */
+color: rgb(0, 255, 0);           /* Verde */
+color: rgba(0, 0, 255, 0.5);     /* Azul semi-transparente */</code></pre>
+        </div>
+
+        <h4>4. HSL y HSLA</h4>
+        <div class="ejemplo">
+            <pre><code>color: hsl(0, 100%, 50%);        /* Rojo */
+color: hsl(120, 100%, 50%);      /* Verde */
+color: hsla(240, 100%, 50%, 0.5); /* Azul semi-transparente */</code></pre>
+        </div>
+
+        <div class="color-palette">
+            <div class="color-box" style="background: #e74c3c;">#e74c3c</div>
+            <div class="color-box" style="background: #3498db;">#3498db</div>
+            <div class="color-box" style="background: #2ecc71;">#2ecc71</div>
+            <div class="color-box" style="background: #f39c12;">#f39c12</div>
+            <div class="color-box" style="background: #9b59b6;">#9b59b6</div>
+        </div>
+    </section>
+
+    <!-- BACKGROUND -->
+    <section>
+        <h2>Propiedades de Fondo (Background)</h2>
+
+        <h3>background-color</h3>
+        <div class="ejemplo">
+            <pre><code>body {
+background-color: #f0f0f0;
+}
+
+.destacado {
+background-color: rgba(52, 152, 219, 0.2);
+}</code></pre>
+        </div>
+
+        <h3>background-image</h3>
+        <div class="ejemplo">
+            <pre><code>body {
+background-image: url('imagenes/fondo.jpg');
+}
+
+.patron {
+background-image: url('patron.png');
+}</code></pre>
+        </div>
+
+        <h3>background-repeat</h3>
+        <div class="ejemplo">
+            <pre><code>div {
+background-image: url('logo.png');
+background-repeat: no-repeat;  /* no-repeat, repeat, repeat-x, repeat-y */
+}</code></pre>
+        </div>
+
+        <h3>background-position</h3>
+        <div class="ejemplo">
+            <pre><code>div {
+background-position: center;     /* center, top, bottom, left, right */
+background-position: 50% 50%;    /* Usando porcentajes */
+background-position: 10px 20px;  /* Usando píxeles */
+}</code></pre>
+        </div>
+
+        <h3>background-size</h3>
+        <div class="ejemplo">
+            <pre><code>div {
+background-size: cover;     /* Cubre todo el contenedor */
+background-size: contain;   /* Se ajusta dentro del contenedor */
+background-size: 100px 200px; /* Tamaño específico */
+}</code></pre>
+        </div>
+
+        <h3>Propiedad Abreviada (Shorthand)</h3>
+        <p>Puedes especificar todas las propiedades de fondo en una sola línea.</p>
+
+        <div class="ejemplo">
+            <pre><code>body {
+background: #ffffff url("fondo.jpg") no-repeat center center;
+}
+
+/* Equivale a: */
+body {
+background-color: #ffffff;
+background-image: url("fondo.jpg");
+background-repeat: no-repeat;
+background-position: center center;
+}</code></pre>
+        </div>
+
+        <h3>Gradientes</h3>
+        <div class="ejemplo">
+            <h4>Gradiente Lineal:</h4>
+            <pre><code>div {
+background: linear-gradient(to right, #ff0000, #00ff00);
+background: linear-gradient(45deg, #3498db, #8e44ad);
+}</code></pre>
+
+            <h4>Gradiente Radial:</h4>
+            <pre><code>div {
+background: radial-gradient(circle, #3498db, #2ecc71);
+}</code></pre>
+        </div>
+
+        <div class="gradient-demo">
+            <div class="grad1">Gradiente 1</div>
+            <div class="grad2">Gradiente 2</div>
+            <div class="grad3">Gradiente 3</div>
+        </div>
+    </section>
+
+    <!-- BORDES -->
+    <section>
+        <h2>Bordes (Border)</h2>
+
+        <h3>Propiedades de Borde</h3>
+        <div class="ejemplo">
+            <pre><code>div {
+border-width: 2px;           /* Grosor */
+border-style: solid;         /* Estilo */
+border-color: #3498db;       /* Color */
+}
+
+/* Forma abreviada: */
+div {
+border: 2px solid #3498db;
+}</code></pre>
+        </div>
+
+        <h3>Estilos de Borde</h3>
+        <ul>
+            <li><code>solid</code>: Línea sólida</li>
+            <li><code>dashed</code>: Línea discontinua</li>
+            <li><code>dotted</code>: Línea punteada</li>
+            <li><code>double</code>: Línea doble</li>
+            <li><code>groove</code>, <code>ridge</code>, <code>inset</code>, <code>outset</code>: Efectos 3D</li>
+            <li><code>none</code>: Sin borde</li>
+        </ul>
+
+        <div class="border-demo">
+            <div class="border-solid">solid</div>
+            <div class="border-dashed">dashed</div>
+            <div class="border-dotted">dotted</div>
+            <div class="border-double">double</div>
+        </div>
+
+        <h3>Bordes Individuales</h3>
+        <div class="ejemplo">
+            <pre><code>div {
+border-top: 3px solid red;
+border-right: 2px dashed blue;
+border-bottom: 1px dotted green;
+border-left: 4px double orange;
+}</code></pre>
+        </div>
+    </section>
+
+    <!-- BORDER-RADIUS -->
+    <section>
+        <h2>border-radius (Esquinas Redondeadas)</h2>
+        <p>Permite crear esquinas redondeadas en los elementos.</p>
+
+        <div class="ejemplo">
+            <h4>Sintaxis básica:</h4>
+            <pre><code>div {
+border-radius: 10px;        /* Todas las esquinas */
+border-radius: 50%;         /* Círculo perfecto */
+}
+
+/* Esquinas individuales: */
+div {
+border-radius: 10px 20px 30px 40px;
+/* top-left, top-right, bottom-right, bottom-left */
+}</code></pre>
+        </div>
+
+        <h3>Propiedades Individuales</h3>
+        <div class="ejemplo">
+            <pre><code>div {
+border-top-left-radius: 10px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 30px;
+border-bottom-left-radius: 40px;
+}</code></pre>
+        </div>
+
+        <div class="radius-demo">
+            <div class="radius1">10px</div>
+            <div class="radius2">25px</div>
+            <div class="radius3">50%</div>
+            <div class="radius4">Custom</div>
+        </div>
+
+        <div class="nota">
+            <strong>Tip:</strong> Para crear un círculo perfecto, el elemento debe tener el mismo ancho y alto, y usar <code>border-radius: 50%</code>.
+        </div>
+    </section>
+
+    <!-- TEXT PROPERTIES -->
+    <section>
+        <h2>Otras Propiedades de Texto</h2>
+
+        <h3>text-align</h3>
+        <div class="ejemplo">
+            <pre><code>p {
+text-align: left;    /* left, right, center, justify */
+}</code></pre>
+        </div>
+
+        <h3>text-decoration</h3>
+        <div class="ejemplo">
+            <pre><code>a {
+text-decoration: none;       /* Quitar subrayado */
+}
+
+.subrayado {
+text-decoration: underline;
+}
+
+.tachado {
+text-decoration: line-through;
+}</code></pre>
+        </div>
+
+        <h3>text-transform</h3>
+        <div class="ejemplo">
+            <pre><code>h1 {
+text-transform: uppercase;   /* MAYÚSCULAS */
+}
+
+h2 {
+text-transform: lowercase;   /* minúsculas */
+}
+
+h3 {
+text-transform: capitalize;  /* Capitalize Each Word */
+}</code></pre>
+        </div>
+
+        <h3>line-height</h3>
+        <div class="ejemplo">
+            <pre><code>p {
+line-height: 1.6;    /* Espaciado entre líneas */
+}</code></pre>
+        </div>
+
+        <h3>letter-spacing y word-spacing</h3>
+        <div class="ejemplo">
+            <pre><code>.espaciado {
+letter-spacing: 2px;    /* Espacio entre letras */
+word-spacing: 5px;      /* Espacio entre palabras */
+}</code></pre>
+        </div>
+    </section>
+
+    <a href="../index.html" class="btn-back">← Volver al Inicio</a>
+
+
+    <footer>
+        <p>&copy; 2024 Tutorial HTML5 y CSS3 | CSS Estilos</p>
+    </footer>
+</body>
+</html>

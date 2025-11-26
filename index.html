@@ -1,20 +1,127 @@
-<html>
-    <head>
-        <meta title="Student Handbook">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial HTML5 y CSS3</title>
+    <link rel="stylesheet" href="estilos/indexEstilos.css">
+</head>
+<body>
+    <header>
+        <h1>Tutorial Completo de HTML5 y CSS3</h1>
+        <p class="subtitle">Guía Completa de Desarrollo Web</p>
+    </header>
 
-    </head>
-    <body>
+    <nav>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="info.html">Informacion</a></li>
-            <li><a href="lesson.html">Lecciones</a></li>
-            <li><a href="material.html">Materiales</a></li>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="pages/html-basico.html">HTML Básico</a></li>
+            <li><a href="pages/html-avanzado.html">HTML Avanzado</a></li>
+            <li><a href="pages/css-fundamentos.html">CSS Fundamentos</a></li>
+            <li><a href="pages/css-estilos.html">CSS Estilos</a></li>
+            <li><a href="pages/recursos.html">Recursos</a></li>
+            <li><a href="pages/ejercicios.html">Ejercicios</a></li>
         </ul>
-        <section>
-            <article>
-                <h1>Titulo 1</h1>
-                <p>Pararrafo gracioso</p>
-            </article>
+    </nav>
+
+    <main>
+        <section class="intro">
+            <h2>Bienvenido al Tutorial</h2>
+            <p>Este es un tutorial completo sobre HTML5 y CSS3 organizado en secciones temáticas para facilitar tu aprendizaje. Navega por el menú superior para acceder a cada tema.</p>
+            
+            <div class="sections-grid">
+                <article class="card">
+                    <h3>📄 HTML Básico</h3>
+                    <p>Fundamentos de HTML5: estructura, semántica, formato de texto y caracteres especiales.</p>
+                    <ul>
+                        <li>Estructura básica del documento</li>
+                        <li>Elementos semánticos (header, nav, section, etc.)</li>
+                        <li>Formato de texto y saltos de línea</li>
+                        <li>Caracteres especiales</li>
+                        <li>Comentarios en HTML</li>
+                    </ul>
+                    <a href="pages/html-basico.html" class="btn-card">Ver contenido →</a>
+                </article>
+
+                <article class="card">
+                    <h3>🚀 HTML Avanzado</h3>
+                    <p>Elementos avanzados: multimedia, navegación, listas, imágenes y formularios.</p>
+                    <ul>
+                        <li>Audio y Video (formatos y compatibilidad)</li>
+                        <li>Enlaces y tipos de referencias</li>
+                        <li>Listas ordenadas y no ordenadas</li>
+                        <li>Imágenes y atributos</li>
+                        <li>Formularios y elementos de entrada</li>
+                    </ul>
+                    <a href="pages/html-avanzado.html" class="btn-card">Ver contenido →</a>
+                </article>
+
+                <article class="card">
+                    <h3>🎨 CSS Fundamentos</h3>
+                    <p>Introducción a CSS3: sintaxis, selectores y aplicación de estilos.</p>
+                    <ul>
+                        <li>¿Qué es CSS? Definición y uso</li>
+                        <li>Formas de aplicar CSS (inline, embebido, externo)</li>
+                        <li>Sintaxis básica de CSS</li>
+                        <li>Selectores (universal, id, class, pseudo-clases)</li>
+                        <li>Modelo de caja</li>
+                    </ul>
+                    <a href="pages/css-fundamentos.html" class="btn-card">Ver contenido →</a>
+                </article>
+
+                <article class="card">
+                    <h3>✨ CSS Estilos</h3>
+                    <p>Estilización avanzada: fuentes, colores, fondos y efectos visuales.</p>
+                    <ul>
+                        <li>Propiedades de fuentes (font-family, size, weight)</li>
+                        <li>Colores y fondos (background, gradientes)</li>
+                        <li>Bordes y esquinas redondeadas</li>
+                        <li>Efectos visuales</li>
+                    </ul>
+                    <a href="pages/css-estilos.html" class="btn-card">Ver contenido →</a>
+                </article>
+
+                <article class="card">
+                    <h3>🔗 Recursos</h3>
+                    <p>Enlaces útiles, documentación oficial y herramientas recomendadas.</p>
+                    <ul>
+                        <li>Documentación oficial W3C</li>
+                        <li>Herramientas de desarrollo</li>
+                        <li>Editores de código recomendados</li>
+                        <li>Sitios de referencia</li>
+                    </ul>
+                    <a href="pages/recursos.html" class="btn-card">Ver contenido →</a>
+                </article>
+
+                <article class="card">
+                    <h3>💪 Ejercicios Prácticos</h3>
+                    <p>Practica lo aprendido con ejercicios y ejemplos interactivos.</p>
+                    <ul>
+                        <li>Ejercicios básicos de HTML</li>
+                        <li>Ejercicios de CSS</li>
+                        <li>Proyectos completos</li>
+                        <li>Retos de código</li>
+                    </ul>
+                    <a href="pages/ejercicios.html" class="btn-card">Ver contenido →</a>
+                </article>
+            </div>
         </section>
-    </body>
+
+        <section>
+            <h2>¿Por dónde empezar?</h2>
+            <p>Si eres principiante, te recomendamos seguir este orden:</p>
+            <ol>
+                <li><strong>HTML Básico:</strong> Aprende los fundamentos de HTML5</li>
+                <li><strong>HTML Avanzado:</strong> Domina elementos más complejos</li>
+                <li><strong>CSS Fundamentos:</strong> Entiende cómo funciona CSS</li>
+                <li><strong>CSS Estilos:</strong> Crea diseños atractivos</li>
+                <li><strong>Ejercicios:</strong> Practica lo aprendido</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tutorial HTML5 y CSS3 | Desarrollo Web</p>
+    </footer>
+</body>
 </html>
