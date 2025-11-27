@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-/* Importar estilos base */
-@import url('../estilos/indexEstilos.css');
-=======
 /* estilos-html.css */
 /* Estilos para el Tutorial de HTML5 */
->>>>>>> 1bb4524 (Se redujeron los archivos y se modifico el ascpeto de "html-)
 
 * {
     margin: 0;
@@ -59,138 +54,6 @@ nav li {
     display: inline-block;
 }
 
-<<<<<<< HEAD
-/* Títulos de sección */
-section h2 {
-    color: #c0392b;
-    border-bottom: 3px solid #e74c3c;
-    font-size: 2.2rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    position: relative;
-    padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-section h2::before {
-    margin-right: 15px;
-    font-size: 2rem;
-}
-
-section h2::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #e74c3c 0%, #f5576c 100%);
-    border-radius: 2px;
-}
-
-section h3 {
-    color: #e74c3c;
-    font-size: 1.7rem;
-    margin-top: 2.5rem;
-    padding-left: 18px;
-    border-left: 5px solid #f093fb;
-}
-
-section h4 {
-    color: #e67e22;
-    font-size: 1.3rem;
-    margin-top: 1.5rem;
-}
-
-/* Bloques de código con tema oscuro rojizo */
-pre {
-    background: linear-gradient(135deg, #2c1810 0%, #3d2416 100%);
-    border-left: 5px solid #e74c3c;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    position: relative;
-    padding: 1.5rem;
-}
-
-pre code {
-    color: #ffb3ba;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.7);
-    font-family: 'Courier New', monospace;
-    font-size: 0.95rem;
-}
-
-/* Etiqueta de lenguaje */
-pre::before {
-    content: "CSS3";
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 5px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-/* Listas personalizadas */
-ul {
-    padding-left: 2.5rem;
-}
-
-ul li {
-    margin-bottom: 0.9rem;
-    position: relative;
-    line-height: 1.7;
-}
-
-ul li::before {
-    content: "►";
-    position: absolute;
-    left: -1.5rem;
-    color: #e74c3c;
-    font-size: 0.9rem;
-}
-
-ol li::marker {
-    color: #e74c3c;
-    font-weight: bold;
-    font-size: 1.15em;
-}
-
-/* Checkmarks */
-ul li:has(code)::before {
-    content: "✓";
-    color: #27ae60;
-    font-weight: bold;
-}
-
-/* Enlaces */
-a:not(.btn-back):not(.active) {
-    font-weight: 600;
-}
-
-a:not(.btn-back):not(.active):hover {
-    text-decoration-color: #f5576c;
-}
-
-/* Botón de regreso */
-.btn-back {
-    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
-}
-
-.btn-back:hover {
-    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
-    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
-}
-
-/* Navegación activa */
-nav a.active {
-    background-color: #e74c3c;
-    border-bottom-color: #f5576c;
-}
-
-=======
 nav a {
     text-decoration: none;
     color: #667eea;
@@ -200,7 +63,6 @@ nav a {
     font-weight: 600;
 }
 
->>>>>>> 1bb4524 (Se redujeron los archivos y se modifico el ascpeto de "html-)
 nav a:hover {
     background: #667eea;
     color: white;
