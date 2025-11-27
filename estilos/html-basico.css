@@ -1,5 +1,5 @@
 /* Importar estilos base */
-@import url('../css/estilos.css');
+@import url('indexEstilos.css');
 
 /* Personalizaciones para HTML Básico */
 
@@ -94,24 +94,27 @@ pre code::before {
     font-weight: bold;
 }
 
-/* Listas con iconos personalizados */
+/* Listas con iconos personalizados 
+*/
 ul li::marker {
-    color: #7e57c2;
+    color: #000000;
     font-size: 1.2em;
 }
 
 ol li::marker {
-    color: #7e57c2;
+    color: #000;
     font-weight: bold;
 }
 
-/* Enlaces con color púrpura */
+/* Enlaces con color púrpura 
 a:not(.btn-back):not(.active) {
-    color: #7e57c2;
+    color: #fff;
 }
+*/
 
 a:not(.btn-back):not(.active):hover {
-    color: #5e35b1;
+    background-color: #3c1287;
+    border-bottom-color:#5e35b1 ;
 }
 
 /* Botón de regreso personalizado */
@@ -129,6 +132,7 @@ a:not(.btn-back):not(.active):hover {
 nav a.active {
     background-color: #7e57c2;
     border-bottom-color: #5e35b1;
+    
 }
 
 /* Secciones con efecto de elevación al hover */
@@ -141,7 +145,8 @@ section:hover {
     box-shadow: 0 8px 20px rgba(126, 87, 194, 0.15);
 }
 
-/* Scrollbar personalizado para navegadores webkit */
+/* Scrollbar personalizado para navegadores webkit 
+*/
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -159,7 +164,7 @@ section:hover {
     background: #5e35b1;
 }
 
-/* Animación para elementos de ejemplo */
+/* Animación para elementos de ejemplo 
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -175,7 +180,7 @@ section:hover {
     animation: slideIn 0.5s ease-out;
 }
 
-/* Responsivo - ajustes adicionales */
+/* Responsivo - ajustes adicionales 
 @media (max-width: 768px) {
     section h2 {
         font-size: 1.5rem;
@@ -189,3 +194,4 @@ section:hover {
         display: none;
     }
 }
+    */

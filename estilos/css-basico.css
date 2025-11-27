@@ -1,5 +1,5 @@
 /* Importar estilos base */
-@import url('../css/estilos.css');
+@import url('../estilos/indexEstilos.css');
 
 /* Personalizaciones para CSS Fundamentos */
 
@@ -87,13 +87,11 @@ section h2 {
 }
 
 section h2::before {
-    content: "📚";
     margin-right: 15px;
     font-size: 2rem;
 }
 
 section h2::after {
-    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -183,12 +181,10 @@ ul li:has(code)::before {
 
 /* Enlaces */
 a:not(.btn-back):not(.active) {
-    color: #e74c3c;
     font-weight: 600;
 }
 
 a:not(.btn-back):not(.active):hover {
-    color: #c0392b;
     text-decoration-color: #f5576c;
 }
 
