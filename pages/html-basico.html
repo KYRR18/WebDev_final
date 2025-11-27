@@ -9,321 +9,310 @@
 </head>
 <body>
     <header>
-        <h1>Tutorial Completo de HTML5</h1>
-        <p>Aprende desarrollo web desde lo básico hasta lo avanzado</p>
+        <h1>Guía Didáctica de HTML para Principiantes</h1>
     </header>
-    
+
     <nav>
         <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="#introduccion">Introducción</a></li>
             <li><a href="#estructura">Estructura</a></li>
-            <li><a href="#semantica">Semántica</a></li>
-            <li><a href="#multimedia">Multimedia</a></li>
             <li><a href="#enlaces">Enlaces</a></li>
+            <li><a href="#formato">Formato</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
             <li><a href="#listas">Listas</a></li>
-            <li><a href="#imagenes">Imágenes</a></li>
             <li><a href="#formularios">Formularios</a></li>
+            <li><a href="#ejemplos">Ejemplos</a></li>
         </ul>
     </nav>
-    
+
+    <section id="introduccion">
+        <h2>1. Introducción a HTML</h2>
+        
+        <h3>1.1. ¿Qué es HTML?</h3>
+        <p>HTML (HyperText Markup Language) es un lenguaje de marcado que se utiliza para crear y estructurar el contenido de las páginas web. No es un lenguaje de programación; funciona mediante etiquetas y no tiene estructuras de control como bucles o condicionales.</p>
+
+        <h3>1.2. Estructura Básica del Documento</h3>
+        <p>Todo documento HTML se basa en una estructura fundamental:</p>
+        <ul>
+            <li>La línea <code>&lt;!DOCTYPE html&gt;</code> declara la versión HTML5.</li>
+            <li><code>&lt;html&gt;</code> es la etiqueta raíz.</li>
+            <li><code>&lt;head&gt;</code> contiene información no visible para el usuario (como el título de la pestaña o metadatos).</li>
+            <li><code>&lt;body&gt;</code> contiene todo el contenido visible de la página.</li>
+        </ul>
+
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Título de la Ventana&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h3>1.3. Etiquetas (Tags) y Atributos</h3>
+        <ul>
+            <li><strong>Etiquetas:</strong> La base de HTML. La mayoría tienen una apertura (<code>&lt;etiqueta&gt;</code>) y cierre (<code>&lt;/etiqueta&gt;</code>).</li>
+            <li><strong>Etiquetas Vacías:</strong> Algunas etiquetas no necesitan cierre, como <code>&lt;br&gt;</code> (salto de línea) o <code>&lt;img&gt;</code> (imagen).</li>
+            <li><strong>Atributos:</strong> Propiedades que se añaden a la etiqueta de apertura con el formato <code>nombre="valor"</code> para particularizar su apariencia o comportamiento.</li>
+        </ul>
+        <p>Ejemplo: El atributo <code>bgcolor</code> en <code>&lt;body&gt;</code> cambia el color de fondo de toda la página. Los colores suelen usar el formato RGB Hexadecimal (e.g., #FF0000 para rojo).</p>
+    </section>
 
     <section id="estructura">
-        <h2>Estructura Básica de HTML</h2>
-        <p>HTML funciona a través de <strong>etiquetas (tags)</strong> que permiten la creación de contenido y su formato. Los documentos HTML se escriben en modo ASCII usando cualquier procesador de texto.</p>
-        
-        <h3>Caracteres Especiales</h3>
-        <p>Los caracteres <code>&lt;</code> y <code>&gt;</code> son especiales. Para escribirlos como texto, usa <code>&amp;lt;</code> y <code>&amp;gt;</code></p>
-        
+        <h2>2. Elementos de Estructura y Semántica (HTML5)</h2>
+        <p>HTML5 introdujo etiquetas para dar sentido (semántica) a las diferentes partes del documento, lo que ayuda a los motores de búsqueda a entender el contenido.</p>
+
+        <h3>2.1. Contenedores Genéricos</h3>
+        <table>
+            <tr>
+                <th>Etiqueta</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td><code>&lt;body&gt;</code></td>
+                <td>Define casi toda la página visible.</td>
+            </tr>
+            <tr>
+                <td><code>&lt;span&gt;</code></td>
+                <td>Crea un bloque en línea dentro de un párrafo para aplicar un estilo diferente.</td>
+            </tr>
+            <tr>
+                <td><code>&lt;iframe&gt;</code></td>
+                <td>Se usa para incrustar contenido de otra fuente (generalmente de otros sitios web).</td>
+            </tr>
+        </table>
+
+        <h3>2.2. Elementos Semánticos Estructurales</h3>
+        <p>Estos elementos ayudan a definir las regiones clave de la página:</p>
+        <table>
+            <tr>
+                <th>Etiqueta</th>
+                <th>Propósito/Uso</th>
+            </tr>
+            <tr>
+                <td><code>&lt;header&gt;</code></td>
+                <td>Especifica un encabezado de un documento o sección.</td>
+            </tr>
+            <tr>
+                <td><code>&lt;nav&gt;</code></td>
+                <td>Agrupa enlaces de navegación principales (menú).</td>
+            </tr>
+            <tr>
+                <td><code>&lt;section&gt;</code></td>
+                <td>Define secciones temáticas o funcionales (capítulos, introducción).</td>
+            </tr>
+            <tr>
+                <td><code>&lt;article&gt;</code></td>
+                <td>Contenido independiente y autónomo (noticias, publicaciones de blog, comentarios de foros).</td>
+            </tr>
+            <tr>
+                <td><code>&lt;aside&gt;</code></td>
+                <td>Contenido al margen del contenido principal (barras laterales, notas).</td>
+            </tr>
+            <tr>
+                <td><code>&lt;footer&gt;</code></td>
+                <td>Define el pie de página; suele contener información de autor, copyright, y enlaces.</td>
+            </tr>
+        </table>
+
+        <h3>2.3. Elementos Semánticos de Contenido</h3>
+        <ul>
+            <li><code>&lt;figure&gt;</code>: Especifica contenido como ilustraciones o diagramas. Su eliminación no debe afectar el flujo principal.</li>
+            <li><code>&lt;figcaption&gt;</code>: Específica una denominación o título para la figura, y debe colocarse al inicio o al final del elemento <code>&lt;figure&gt;</code>.</li>
+            <li><code>&lt;time&gt;</code>: Permite fijar una fecha y hora, usando el atributo <code>datetime</code> para el calendario gregoriano.</li>
+        </ul>
+    </section>
+
+    <section id="enlaces">
+        <h2>3. Enlaces (Hyperlinks)</h2>
+        <p>La etiqueta <code>&lt;a&gt;</code> (ancla) se usa para insertar enlaces, y el atributo <code>href</code> especifica el destino.</p>
+
+        <h3>3.1. Tipos de Referencia (href)</h3>
+        <ul>
+            <li><strong>Absoluta:</strong> Conduce a una ubicación externa (debe incluir el dominio, e.g., https://...).</li>
+            <li><strong>Relativa:</strong> Conduce a un documento dentro del mismo sitio (e.g., /acerca_de.html).</li>
+            <li><strong>Punto de Fijación (Ancla):</strong> Conduce a un punto específico dentro de un documento usando <code>#nombre_de_punto</code>. Para crear el punto de fijación se usa el atributo <code>name</code> dentro de otra etiqueta <code>&lt;a&gt;</code>.</li>
+            <li><strong>Correo Electrónico:</strong> La referencia es <code>mailto:direcciondecorreo</code>. Se puede prellenar el asunto: <code>mailto:correo@ejemplo.com?subject=El asunto</code>.</li>
+            <li><strong>Vínculo Vacío:</strong> El valor de <code>href</code> es solo <code>#</code>, manteniendo el formato de enlace sin llevar a ninguna página.</li>
+        </ul>
+
+        <h3>3.2. Destino del Enlace (target)</h3>
+        <p>El atributo <code>target</code> determina en qué ventana se abrirá el destino.</p>
+        <table>
+            <tr>
+                <th>Valor de target</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td><code>_self</code></td>
+                <td>Opción predeterminada. Abre el documento en el mismo marco o ventana.</td>
+            </tr>
+            <tr>
+                <td><code>_blank</code></td>
+                <td>Abre el documento vinculado en una ventana o pestaña nueva.</td>
+            </tr>
+            <tr>
+                <td><code>_top</code></td>
+                <td>Abre el documento en la ventana completa del navegador.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="formato">
+        <h2>4. Formato de Contenido y Caracteres</h2>
+
+        <h3>4.1. Salto de Línea y Espacios</h3>
+        <ul>
+            <li><strong>Salto de Línea:</strong> La etiqueta vacía <code>&lt;br&gt;</code> se utiliza para forzar un salto de línea.</li>
+            <li><strong>Espacios Múltiples:</strong> Para tener más de un espacio en blanco seguido, se usa el carácter <code>&amp;nbsp;</code> (espacio duro), ya que HTML solo reconoce uno.</li>
+        </ul>
+
+        <h3>4.2. Caracteres Especiales (Entidades HTML)</h3>
+        <p>Se usan entidades HTML para representar caracteres que tienen un significado especial (como &lt; y &gt;) o caracteres que no se visualizan correctamente.</p>
         <table>
             <tr>
                 <th>Carácter</th>
-                <th>Código</th>
-                <th>Carácter</th>
-                <th>Código</th>
+                <th>Representación (Entidad)</th>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td><code>&amp;lt;</code></td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td><code>&amp;gt;</code></td>
             </tr>
             <tr>
                 <td>á</td>
-                <td>&amp;aacute;</td>
-                <td>é</td>
-                <td>&amp;eacute;</td>
+                <td><code>&amp;aacute;</code></td>
             </tr>
             <tr>
-                <td>í</td>
-                <td>&amp;iacute;</td>
-                <td>ó</td>
-                <td>&amp;oacute;</td>
-            </tr>
-            <tr>
-                <td>ú</td>
-                <td>&amp;uacute;</td>
                 <td>ñ</td>
-                <td>&amp;ntilde;</td>
-            </tr>
-            <tr>
-                <td>¿</td>
-                <td>&amp;iquest;</td>
-                <td>¡</td>
-                <td>&amp;iexcl;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&amp;nbsp;</td>
-                <td>&copy;</td>
-                <td>&amp;copy;</td>
+                <td><code>&amp;ntilde;</code></td>
             </tr>
         </table>
-        
-        <h3>Etiqueta &lt;body&gt;</h3>
-        <p>Define casi toda la página. Los cambios en los atributos del body afectan a toda la página.</p>
-        <pre><code>&lt;body bgcolor="#0300A0" background="imagen.jpg"&gt;
-Contenido de la página
-&lt;/body&gt;</code></pre>
-        
-        <h3>Comentarios</h3>
-        <p>Líneas que el navegador no muestra, útiles para edición:</p>
-        <pre><code>&lt;!-- Esto es un comentario --&gt;</code></pre>
-        
-        <h3>Saltos de Línea</h3>
-        <p>La etiqueta <code>&lt;br&gt;</code> genera un salto de línea.</p>
-        <p>La etiqueta <code>&lt;pre&gt;</code> permite texto preformateado que respeta espacios y saltos.</p>
+
+        <h3>4.3. Texto Preformateado (&lt;pre&gt;)</h3>
+        <p>Esta etiqueta le indica al navegador que debe respetar los espacios en blanco, los saltos de línea y la mayoría de caracteres especiales tal como están en el editor de texto.</p>
+        <p><strong>Limitación:</strong> No puede incluir ciertas etiquetas, como <code>&lt;img&gt;</code> o <code>&lt;object&gt;</code>.</p>
+
+        <h3>4.4. Comentarios</h3>
+        <p>Son líneas de texto ignoradas por el navegador, usadas para documentar el código.</p>
+        <p><strong>Sintaxis:</strong> <code>&lt;!-- Esto es un comentario --&gt;</code></p>
     </section>
-    
-    <section id="semantica">
-        <h2>Elementos Semánticos HTML5</h2>
-        <p>Elementos que ayudan a los navegadores a identificar el contenido de la página mediante etiquetas con significado.</p>
-        
-        <h3>&lt;header&gt;</h3>
-        <p>Especifica un encabezado dentro de un documento o sección.</p>
-        
-        <h3>&lt;nav&gt;</h3>
-        <p>Especifica un conjunto de vínculos de navegación.</p>
-        <pre><code>&lt;nav&gt;
-&lt;ul&gt;
-    &lt;li&gt;Principal&lt;/li&gt;
-    &lt;li&gt;Fotos&lt;/li&gt;
-    &lt;li&gt;Contacto&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/nav&gt;</code></pre>
-        
-        <h3>&lt;section&gt;</h3>
-        <p>Define secciones en el documento como capítulos, encabezados, pies de página, etc.</p>
-        
-        <h3>&lt;article&gt;</h3>
-        <p>Permite especificar contenido independiente o autónomo. Útil para foros, noticias, blogs, comentarios, etc.</p>
-        
-        <h3>&lt;aside&gt;</h3>
-        <p>Define contenido al margen del contenido principal.</p>
-        
-        <h3>&lt;footer&gt;</h3>
-        <p>Define el pie de página, que suele contener información del autor, copyright, enlaces, términos, contactos, etc.</p>
-        
-        <h3>&lt;figure&gt; y &lt;figcaption&gt;</h3>
-        <p>Especifica contenido como ilustraciones o diagramas con su denominación.</p>
-        <pre><code>&lt;figure&gt;
-&lt;figcaption&gt;Logotipo HTML5&lt;/figcaption&gt;
-&lt;img src="logo.png" alt="logotipo html5"&gt;
-&lt;/figure&gt;</code></pre>
-        
-        <h3>&lt;time&gt;</h3>
-        <p>Permite fijar una fecha y hora para recordatorio de eventos.</p>
-        <pre><code>&lt;time datetime="2025-11-26"&gt;26 de Noviembre&lt;/time&gt;</code></pre>
-    </section>
-    
+
     <section id="multimedia">
-        <h2>Elementos Multimedia</h2>
-        
-        <h3>&lt;audio&gt;</h3>
-        <p>Permite reproducir archivos de audio (MP3, OGG, WAV).</p>
-        
+        <h2>5. Imágenes y Multimedia</h2>
+
+        <h3>5.1. Imágenes (&lt;img&gt;)</h3>
+        <p>La etiqueta <code>&lt;img&gt;</code> inserta una imagen y es vacía.</p>
+        <ul>
+            <li><code>src</code>: Obligatorio. Especifica la ruta de la imagen.</li>
+            <li><code>alt</code>: Texto alternativo. Se muestra si la imagen no se puede visualizar o es utilizado por lectores de pantalla.</li>
+            <li><strong>Imágenes como Enlaces:</strong> Para hacer una imagen clickeable, se encierra la etiqueta <code>&lt;img&gt;</code> dentro de <code>&lt;a&gt;</code>.</li>
+        </ul>
+
+        <h3>5.2. Audio (&lt;audio&gt;) y Video (&lt;video&gt;)</h3>
+        <ul>
+            <li>Permiten reproducir archivos multimedia de forma nativa en HTML5.</li>
+            <li><code>&lt;source&gt;</code>: Se recomienda usar esta etiqueta dentro de <code>&lt;audio&gt;</code> o <code>&lt;video&gt;</code> para ofrecer múltiples formatos y mejorar la compatibilidad entre navegadores.</li>
+            <li><strong>Atributos clave:</strong> <code>controls</code> (muestra controles de reproducción), <code>autoplay</code> (inicia automáticamente), y <code>loop</code> (repite el contenido).</li>
+            <li>El atributo <code>poster</code> (solo en <code>&lt;video&gt;</code>) define una imagen de preview para mostrar antes de que el video inicie.</li>
+        </ul>
+    </section>
+
+    <section id="listas">
+        <h2>6. Listas</h2>
+
+        <h3>6.1. Listas No Ordenadas (&lt;ul&gt;)</h3>
+        <p>Se usan con <code>&lt;ul&gt;</code> (Unordered List) y cada punto se define con <code>&lt;li&gt;</code> (List Item).</p>
+        <p>El atributo <code>type</code> en el <code>&lt;li&gt;</code> permite cambiar el símbolo (e.g., disc, circle, square).</p>
+        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Café&lt;/li&gt;
+    &lt;li type="square"&gt;Té&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <h3>6.2. Listas Ordenadas (&lt;ol&gt;)</h3>
+        <p>Se usan con <code>&lt;ol&gt;</code> (Ordered List) y cada punto se define con <code>&lt;li&gt;</code>.</p>
+        <p>El atributo <code>value</code> en el <code>&lt;li&gt;</code> permite que la lista comience o salte a un número específico.</p>
+        <pre><code>&lt;ol&gt;
+    &lt;li value="10"&gt;El punto diez&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+    </section>
+
+    <section id="formularios">
+        <h2>7. Formularios (&lt;form&gt;)</h2>
+        <p>Los formularios (<code>&lt;form&gt;</code>) permiten recoger datos introducidos por el usuario.</p>
+
+        <h3>7.1. Atributos de la Etiqueta &lt;form&gt;</h3>
         <table>
             <tr>
-                <th>Navegador</th>
-                <th>MP3</th>
-                <th>WAV</th>
-                <th>OGG</th>
+                <th>Atributo</th>
+                <th>Propósito</th>
             </tr>
             <tr>
-                <td>Chrome</td>
-                <td>✓</td>
-                <td>✓</td>
-                <td>✓</td>
+                <td><code>action</code></td>
+                <td>Dirección a la que se enviarán los datos.</td>
             </tr>
             <tr>
-                <td>Firefox</td>
-                <td>✓</td>
-                <td>✓</td>
-                <td>✓</td>
+                <td><code>method</code></td>
+                <td>El método de transferencia. <code>get</code> (datos visibles en la URL) o <code>post</code> (datos ocultos, usados para cambios).</td>
             </tr>
             <tr>
-                <td>Safari</td>
-                <td>✓</td>
-                <td>✓</td>
-                <td>✗</td>
+                <td><code>enctype</code></td>
+                <td>El modo en que se cifrará la información. Ejemplo: <code>text/plain</code> para envío por correo.</td>
             </tr>
         </table>
-        
-        <pre><code>&lt;audio controls autoplay loop muted&gt;
-&lt;source src="audio.mp3" type="audio/mpeg"&gt;
-&lt;source src="audio.ogg" type="audio/ogg"&gt;
-Tu navegador no soporta audio
-&lt;/audio&gt;</code></pre>
-        
-        <h3>Atributos de &lt;audio&gt;</h3>
-        <ul>
-            <li><strong>autoplay:</strong> Reproduce automáticamente</li>
-            <li><strong>controls:</strong> Muestra controles</li>
-            <li><strong>loop:</strong> Repite el audio</li>
-            <li><strong>muted:</strong> Inicia silenciado</li>
-            <li><strong>preload:</strong> none, auto, metadata</li>
-        </ul>
-        
-        <h3>&lt;video&gt;</h3>
-        <p>Permite desplegar video (MP4, WebM, Ogg).</p>
-        <pre><code>&lt;video controls width="640" height="480" poster="preview.jpg"&gt;
-&lt;source src="video.mp4" type="video/mp4"&gt;
-&lt;source src="video.webm" type="video/webm"&gt;
-Tu navegador no soporta video
-&lt;/video&gt;</code></pre>
-        
-        <h3>&lt;iframe&gt;</h3>
-        <p>Permite incrustar contenido de otra fuente.</p>
-        <pre><code>&lt;iframe src="https://ejemplo.com" width="600" height="400"&gt;&lt;/iframe&gt;</code></pre>
-    </section>
-    
-    <section id="enlaces">
-        <h2>Enlaces y Referencias</h2>
-        
-        <h3>Etiqueta &lt;a&gt;</h3>
-        <p>Crea hipervínculos que llevan a páginas o archivos.</p>
-        <pre><code>&lt;a href="https://ejemplo.com"&gt;Visitar sitio&lt;/a&gt;</code></pre>
-        
-        <h3>Tipos de Referencias</h3>
-        <ul>
-            <li><strong>Absoluta:</strong> Conduce a ubicación externa (http://...)</li>
-            <li><strong>Relativa:</strong> Dentro del mismo sitio</li>
-            <li><strong>Punto de fijación:</strong> A un ancla dentro del documento</li>
-        </ul>
-        
-        <h3>Atributo target</h3>
-        <ul>
-            <li><strong>_blank:</strong> Abre en ventana nueva</li>
-            <li><strong>_self:</strong> Misma ventana (predeterminado)</li>
-            <li><strong>_parent:</strong> Marco padre</li>
-            <li><strong>_top:</strong> Ventana completa</li>
-        </ul>
-        
-        <pre><code>&lt;a href="https://buap.mx" target="_blank"&gt;Visita BUAP&lt;/a&gt;</code></pre>
-        
-        <h3>Anclas</h3>
-        <p>Crear puntos de fijación en el documento:</p>
-        <pre><code>&lt;a name="miancla"&gt;&lt;/a&gt;
-&lt;a href="#miancla"&gt;Ir al ancla&lt;/a&gt;</code></pre>
-        
-        <h3>Enlaces Especiales</h3>
-        <p>Correo electrónico:</p>
-        <pre><code>
-&lt;a href="mailto:correo@ejemplo.com"&gt;Enviar email&lt;/a&gt;
-&lt;a href="mailto:correo@ejemplo.com?subject=Asunto"&gt;Email con asunto&lt;/a&gt;
-        </code></pre>
-        
-        <p>Descarga de archivos:</p>
-        <pre><code>&lt;a href="documento.pdf"&gt;Descargar PDF&lt;/a&gt;</code></pre>
-        
-        <p>Vínculo vacío:</p>
-        <pre><code>&lt;a href="#"&gt;Vínculo vacío&lt;/a&gt;</code></pre>
-    </section>
-    
-    <section id="listas">
-        <h2>Listas</h2>
-        
-        <h3>Listas No Ordenadas &lt;ul&gt;</h3>
-        <pre><code>
-&lt;ul&gt;
-    &lt;li type="disc"&gt;Punto negro&lt;/li&gt;
-    &lt;li type="circle"&gt;Punto círculo&lt;/li&gt;
-    &lt;li type="square"&gt;Punto cuadrado&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-        
-        <h3>Listas Ordenadas &lt;ol&gt;</h3>
-        <pre><code>
-&lt;ol&gt;
-    &lt;li&gt;Primer elemento&lt;/li&gt;
-    &lt;li&gt;Segundo elemento&lt;/li&gt;
-    &lt;li&gt;Tercer elemento&lt;/li&gt;
-&lt;/ol&gt;
-        </code></pre>
-        
-        <p>Iniciar en número específico:</p>
-        <pre><code>
-&lt;ol&gt;
-    &lt;li value="20"&gt;Este será el 20&lt;/li&gt;
-    &lt;li&gt;Este será el 21&lt;/li&gt;
-    &lt;li&gt;Este será el 22&lt;/li&gt;
-&lt;/ol&gt;
-        </code></pre>
-    </section>
-    
-    <section id="imagenes">
-        <h2>Imágenes</h2>
-        
-        <h3>Etiqueta &lt;img&gt;</h3>
-        <p>Inserta imágenes en la página. No necesita etiqueta de cierre.</p>
-        <pre><code>&lt;img src="imagenes/foto.jpg" alt="Descripción de la imagen"&gt;</code></pre>
-        
-        <h3>Texto Alternativo (alt)</h3>
-        <p>Se muestra cuando la imagen no puede cargarse.</p>
-        <pre><code>&lt;img src="gato.gif" alt="Imagen de un gato"&gt;</code></pre>
-        
-        <h3>Enlaces con Imágenes</h3>
-        <p>Combinar <code>&lt;a&gt;</code> con <code>&lt;img&gt;</code> para crear imágenes clicables:</p>
-        <pre><code>
-&lt;a href="pagina.html"&gt;
-&lt;img src="imagenes/foto.jpg" alt="Pintura Geométrica"&gt;
-&lt;/a&gt;
-        </code></pre>
-    </section>
-    
-    <section id="formularios">
-        <h2>Formularios</h2>
-        
-        <h3>Estructura Básica</h3>
-        <p>Los formularios recopilan datos del usuario.</p>
-        <pre><code>
-&lt;form action="mailto:correo@servidor.com" method="post" enctype="text/plain"&gt;
-&lt;!-- Elementos del formulario --&gt;
-&lt;/form&gt;
-        </code></pre>
-        
-        <h3>Atributos de &lt;form&gt;</h3>
-        <ul>
-            <li><strong>action:</strong> Dirección de correo o programa que procesará el formulario</li>
-            <li><strong>method:</strong> get o post</li>
-            <li><strong>enctype:</strong> Modo de cifrado para envío</li>
-        </ul>
-        
-        <h3>Área de Texto &lt;textarea&gt;</h3>
-        <pre><code>
-&lt;textarea name="comentario" cols="30" rows="5"&gt;
-Escribe aquí tu texto
-&lt;/textarea&gt;
-        </code></pre>
-        
-        <h3>Elementos de Entrada &lt;input&gt;</h3>
-        <p>Diversos tipos de campos de entrada:</p>
-        <pre><code>
-&lt;input type="text" name="nombre" placeholder="Tu nombre"&gt;
-&lt;input type="email" name="email" placeholder="Tu email"&gt;
-&lt;input type="password" name="password"&gt;
-&lt;input type="submit" value="Enviar"&gt;
-&lt;input type="reset" value="Limpiar"&gt;
-        </code></pre>
-    </section>
-    
-    <a href="tutorial-css.html" class="link-button">Ver Tutorial de CSS</a>
 
-    
+        <h3>7.2. Elementos de Entrada</h3>
+        <ul>
+            <li><strong>Área de Texto (<code>&lt;textarea&gt;</code>):</strong> Permite ingresar texto en múltiples líneas.
+                <ul>
+                    <li><code>name</code>: Nombre para identificar el campo.</li>
+                    <li><code>rows</code> / <code>cols</code>: Indican el alto y ancho visuales.</li>
+                </ul>
+            </li>
+            <li><strong>Elemento de Entrada (<code>&lt;input&gt;</code>):</strong> Etiqueta versátil cuya función cambia con el atributo <code>type</code> (e.g., <code>type="text"</code>, <code>type="submit"</code>).</li>
+        </ul>
+    </section>
+
+    <section id="ejemplos">
+        <h2></h2>Usos Prácticos: Ejemplos de Interacción</h2>
+
+        <h3>8.1. Construcción de una Estructura Navegable</h3>
+        <p>Al combinar elementos semánticos de estructura con listas y enlaces, creamos menús de navegación robustos para todo el sitio.</p>
+        <p><strong>Uso:</strong> Crear el menú principal de la página.</p>
+        <pre><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="productos.html"&gt;Productos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+        <h3>8.2. Creación de Componentes Reutilizables</h3>
+        <p>Combinando los contenedores autónomos con la inserción de imágenes, podemos crear bloques de contenido reutilizables como tarjetas de noticias.</p>
+        <p><strong>Uso:</strong> Definir una publicación de blog completa y autónoma.</p>
+        <pre><code>&lt;section&gt;
+    &lt;article&gt;
+        &lt;h3&gt;Las Novedades del Mes&lt;/h3&gt;
+        &lt;img src="icono_novedad.png" alt="Icono de una estrella" width="50"&gt;
+        &lt;p&gt;Este artículo podría ser movido a cualquier otra página sin perder su significado.&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/section&gt;</code></pre>
+
+        <h3>8.3. Haciendo Elementos Clickeables</h3>
+        <p>Al encerrar una etiqueta de imagen (<code>&lt;img&gt;</code>) dentro de una etiqueta de enlace (<code>&lt;a&gt;</code>), convertimos un elemento visual estático en un hipervínculo interactivo.</p>
+        <p><strong>Uso:</strong> Crear un botón o un icono de red social que lleva al usuario a un sitio externo.</p>
+        <pre><code>&lt;a href="http://www.buap.mx" target="_blank"&gt;
+    &lt;img src="logo_universidad.png" alt="Logo de la BUAP" width="100"&gt;
+&lt;/a&gt;</code></pre>
+    </section>
+
+    <a href="../index.html" class="link-button">Volver al inicio</a>
+
     <footer>
-        <p>&copy; 2025 Tutorial de HTML5 | Desarrollo Web</p>
-        <p>Aprende a crear sitios web modernos</p>
+        <p>&copy; 2024 Guía Didáctica de HTML para Principiantes</p>
     </footer>
 </body>
 </html>
