@@ -11,6 +11,7 @@ body {
     /*background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
     background-image: url(../media/photos_wrinkled-paper-white.jpg);
     min-height: 100vh;
+
 }
 
 header {
@@ -67,21 +68,15 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
 
 section {
-    margin-bottom: 3rem;
+    margin: 2rem auto;
+    max-width: 1200px;
     padding: 1.5rem;
     background: #f8f9fa;
     border-radius: 8px;
     border-left: 4px solid #667eea;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
 h2 {

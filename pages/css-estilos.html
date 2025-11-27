@@ -25,56 +25,56 @@
         </ul>
     </nav>
     
-    <main>
-        <section id="introduccion">
-            <h2>¿Qué es CSS?</h2>
-            <p><strong>CSS (Cascade Style Sheets)</strong> es un lenguaje que trabaja junto con HTML para proveer estilos visuales a los elementos del documento, como tamaño, color, fondo, bordes, etc.</p>
+    <section id="introduccion">
+        <h2>¿Qué es CSS?</h2>
+        <p><strong>CSS (Cascade Style Sheets)</strong> es un lenguaje que trabaja junto con HTML para proveer estilos visuales a los elementos del documento, como tamaño, color, fondo, bordes, etc.</p>
             
-            <p>HTML5 y CSS3 son dos tecnologías diferentes que se complementan. CSS no forma parte de las especificaciones de HTML5.</p>
+        <p>HTML5 y CSS3 son dos tecnologías diferentes que se complementan. CSS no forma parte de las especificaciones de HTML5.</p>
             
-            <h3>Conceptos Básicos</h3>
-            <p>CSS permite controlar la presentación visual de elementos HTML, separando el contenido (HTML) de la presentación (CSS). Esto facilita el mantenimiento y la actualización de sitios web.</p>
-        </section>
+        <h3>Conceptos Básicos</h3>
+        <p>CSS permite controlar la presentación visual de elementos HTML, separando el contenido (HTML) de la presentación (CSS). Esto facilita el mantenimiento y la actualización de sitios web.</p>
+    </section>
         
-        <section id="estructura">
-            <h2>Estructura y Modelo de Caja</h2>
-            
-            <h3>Estructura de Bloque</h3>
-            <p>Cada navegador implementa una estructura por defecto con dos tipos principales de elementos:</p>
-            
-            <h4>Elementos Block</h4>
-            <p>Se posicionan uno sobre otro hacia abajo en la página. Ejemplos: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;p&gt;</code></p>
-            
-            <h4>Elementos Inline-Block</h4>
-            <p>Se posicionan lado a lado en la misma línea, sin salto de línea a menos que no haya más espacio horizontal. Ejemplos: <code>&lt;span&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code></p>
-            
-            <div class="inline-block-demo">
-                <span>Elemento 1</span>
-                <span>Elemento 2</span>
-                <span>Elemento 3</span>
-            </div>
-            
-            <h3>Modelo de Caja</h3>
-            <p>Todas las reglas que especifican la disposición de una página web se denominan "Modelo de caja". Cada elemento HTML es una caja rectangular con:</p>
-            <ul>
-                <li><strong>Contenido:</strong> El área donde aparece el texto o las imágenes</li>
-                <li><strong>Padding:</strong> Espacio entre el contenido y el borde (relleno interno)</li>
-                <li><strong>Border:</strong> El borde que rodea el padding y el contenido</li>
-                <li><strong>Margin:</strong> Espacio exterior que separa el elemento de otros (margen externo)</li>
-            </ul>
-        </section>
+    <section id="estructura">
+        <h2>Estructura y Modelo de Caja</h2>
         
-        <section id="metodos">
-            <h2>Métodos de Aplicación de CSS</h2>
-            
-            <h3>1. Estilos en Línea</h3>
-            <p>Forma simple, rudimentaria y poco práctica. Se aplican directamente en el elemento HTML usando el atributo <code>style</code>:</p>
-            <pre><code>&lt;p style="font-size: 20px; color: blue;"&gt;Esto es un párrafo&lt;/p&gt;</code></pre>
-            <p><strong>Desventaja:</strong> Difícil de mantener y actualizar en sitios grandes.</p>
-            
-            <h3>2. Estilos Embebidos</h3>
-            <p>Una mejor alternativa es insertar los estilos en la cabecera del documento usando la etiqueta <code>&lt;style&gt;</code>:</p>
-            <pre><code>&lt;head&gt;
+        <h3>Estructura de Bloque</h3>
+        <p>Cada navegador implementa una estructura por defecto con dos tipos principales de elementos:</p>
+        
+        <h4>Elementos Block</h4>
+        <p>Se posicionan uno sobre otro hacia abajo en la página. Ejemplos: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;p&gt;</code></p>
+        
+        <h4>Elementos Inline-Block</h4>
+        <p>Se posicionan lado a lado en la misma línea, sin salto de línea a menos que no haya más espacio horizontal. Ejemplos: <code>&lt;span&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code></p>
+        
+        <div class="inline-block-demo">
+            <span>Elemento 1</span>
+            <span>Elemento 2</span>
+            <span>Elemento 3</span>
+        </div>
+        
+        <h3>Modelo de Caja</h3>
+        <p>Todas las reglas que especifican la disposición de una página web se denominan "Modelo de caja". Cada elemento HTML es una caja rectangular con:</p>
+        <ul>
+            <li><strong>Contenido:</strong> El área donde aparece el texto o las imágenes</li>
+            <li><strong>Padding:</strong> Espacio entre el contenido y el borde (relleno interno)</li>
+            <li><strong>Border:</strong> El borde que rodea el padding y el contenido</li>
+            <li><strong>Margin:</strong> Espacio exterior que separa el elemento de otros (margen externo)</li>
+        </ul>
+    </section>
+        
+    <section id="metodos">
+        <h2>Métodos de Aplicación de CSS</h2>
+        
+        <h3>1. Estilos en Línea</h3>
+        <p>Forma simple, rudimentaria y poco práctica. Se aplican directamente en el elemento HTML usando el atributo <code>style</code>:</p>
+        <pre><code>&lt;p style="font-size: 20px; color: blue;"&gt;Esto es un párrafo&lt;/p&gt;</code></pre>
+        <p><strong>Desventaja:</strong> Difícil de mantener y actualizar en sitios grandes.</p>
+        
+        <h3>2. Estilos Embebidos</h3>
+        <p>Una mejor alternativa es insertar los estilos en la cabecera del documento usando la etiqueta <code>&lt;style&gt;</code>:</p>
+
+<pre><code>&lt;head&gt;
     &lt;style&gt;
         p {
             font-size: 20px;
@@ -82,62 +82,68 @@
         }
     &lt;/style&gt;
 &lt;/head&gt;</code></pre>
-            <p>Ahora todas las etiquetas <code>&lt;p&gt;</code> se verán afectadas por estos estilos.</p>
-            
-            <h3>3. Archivos Externos (Recomendado)</h3>
-            <p>Este método tiene más ventajas para facilitar la actualización de los estilos. Se implementa mediante el uso de la etiqueta <code>&lt;link&gt;</code>:</p>
-            <pre><code>&lt;head&gt;
+
+        <p>Ahora todas las etiquetas <code>&lt;p&gt;</code> se verán afectadas por estos estilos.</p>
+        
+        <h3>3. Archivos Externos (Recomendado)</h3>
+        <p>Este método tiene más ventajas para facilitar la actualización de los estilos. Se implementa mediante el uso de la etiqueta <code>&lt;link&gt;</code>:</p>
+
+<pre><code>&lt;head&gt;
     &lt;link rel="stylesheet" type="text/css" href="css/estilos.css"&gt;
 &lt;/head&gt;</code></pre>
-            <p><strong>Ventajas:</strong></p>
-            <ul>
-                <li>Un solo archivo CSS puede estilizar múltiples páginas HTML</li>
-                <li>Fácil mantenimiento y actualización</li>
-                <li>Mejor organización del código</li>
-                <li>Caché del navegador mejora el rendimiento</li>
-            </ul>
-        </section>
+
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Un solo archivo CSS puede estilizar múltiples páginas HTML</li>
+            <li>Fácil mantenimiento y actualización</li>
+            <li>Mejor organización del código</li>
+            <li>Caché del navegador mejora el rendimiento</li>
+        </ul>
+    </section>
         
-        <section id="sintaxis">
-            <h2>Sintaxis de CSS</h2>
-            
-            <p>Un conjunto de reglas CSS consiste en un <strong>selector</strong> y un <strong>bloque de declaración</strong>:</p>
-            
-            <pre><code>h1 {
+    <section id="sintaxis">
+        <h2>Sintaxis de CSS</h2>
+        
+        <p>Un conjunto de reglas CSS consiste en un <strong>selector</strong> y un <strong>bloque de declaración</strong>:</p>
+        
+<pre><code>h1 {
     color: blue;
     font-size: 12px;
 }</code></pre>
             
-            <p><strong>Componentes:</strong></p>
-            <ul>
-                <li><strong>Selector:</strong> h1 (apunta al elemento HTML que desea diseñar)</li>
-                <li><strong>Propiedades:</strong> color, font-size (características a modificar)</li>
-                <li><strong>Valores:</strong> blue, 12px (valores asignados a las propiedades)</li>
-            </ul>
-            
-            <p>El bloque de declaración contiene una o más declaraciones separadas por punto y coma. Cada declaración incluye un nombre de propiedad CSS y un valor, separados por dos puntos. Una declaración de CSS siempre termina con punto y coma, y los bloques de declaración están rodeados de llaves.</p>
-        </section>
+        <p><strong>Componentes:</strong></p>
+        <ul>
+            <li><strong>Selector:</strong> h1 (apunta al elemento HTML que desea diseñar)</li>
+            <li><strong>Propiedades:</strong> color, font-size (características a modificar)</li>
+            <li><strong>Valores:</strong> blue, 12px (valores asignados a las propiedades)</li>
+        </ul>
         
-        <section id="selectores">
-            <h2>Selectores CSS</h2>
-            
-            <h3>Selector Universal (*)</h3>
-            <p>Representa cada uno de los elementos del documento. Es útil cuando necesitamos establecer ciertas reglas básicas:</p>
-            <pre><code>* {
+        <p>El bloque de declaración contiene una o más declaraciones separadas por punto y coma. Cada declaración incluye un nombre de propiedad CSS y un valor, separados por dos puntos. Una declaración de CSS siempre termina con punto y coma, y los bloques de declaración están rodeados de llaves.</p>
+    </section>
+    
+    <section id="selectores">
+        <h2>Selectores CSS</h2>
+        
+        <h3>Selector Universal (*)</h3>
+        <p>Representa cada uno de los elementos del documento. Es útil cuando necesitamos establecer ciertas reglas básicas:</p>
+
+<pre><code>* {
     margin: 0;
     padding: 0;
 }</code></pre>
             
-            <h3>Selector por Etiqueta</h3>
-            <p>Selecciona todos los elementos de un tipo específico:</p>
-            <pre><code>p {
+        <h3>Selector por Etiqueta</h3>
+        <p>Selecciona todos los elementos de un tipo específico:</p>
+
+<pre><code>p {
     color: #333;
     line-height: 1.6;
 }</code></pre>
             
-            <h3>Selector por ID (#)</h3>
-            <p>Referencia un elemento específico mediante su atributo <code>id</code>. El ID debe ser único en el documento:</p>
-            <pre><code>#articulo {
+        <h3>Selector por ID (#)</h3>
+        <p>Referencia un elemento específico mediante su atributo <code>id</code>. El ID debe ser único en el documento:</p>
+
+<pre><code>#articulo {
     font-size: 20px;
 }
 
@@ -145,22 +151,23 @@ p#aside {
     color: red;
 }</code></pre>
             
-            <div class="selector-example">
-                <pre><code>&lt;p id="articulo"&gt;Texto del artículo&lt;/p&gt;
+        <div class="selector-example">
+
+<pre><code>&lt;p id="articulo"&gt;Texto del artículo&lt;/p&gt;
 &lt;p id="aside"&gt;Texto del aside&lt;/p&gt;</code></pre>
-            </div>
+        </div>
             
-            <p><strong>Notas importantes:</strong></p>
-            <ul>
-                <li>Es una referencia sumamente específica</li>
-                <li>No debe haber más de un elemento con el mismo ID</li>
-                <li>Normalmente se emplean IDs para elementos estructurales</li>
-                <li>Suele emplearse más en JavaScript</li>
-            </ul>
-            
-            <h3>Selector por Clase (.)</h3>
-            <p>Más flexible que el ID. Puede ser asignado a múltiples elementos HTML que comparten un diseño similar:</p>
-            <pre><code>.destacado {
+        <p><strong>Notas importantes:</strong></p>
+        <ul>
+            <li>Es una referencia sumamente específica</li>
+            <li>No debe haber más de un elemento con el mismo ID</li>
+            <li>Normalmente se emplean IDs para elementos estructurales</li>
+            <li>Suele emplearse más en JavaScript</li>
+        </ul>
+        
+        <h3>Selector por Clase (.)</h3>
+        <p>Más flexible que el ID. Puede ser asignado a múltiples elementos HTML que comparten un diseño similar:</p>
+<pre><code>.destacado {
     background: yellow;
     font-weight: bold;
 }
@@ -169,52 +176,52 @@ p.especial {
     color: green;
 }</code></pre>
             
-            <h3>Pseudo-clase :not()</h3>
-            <p>Se emplea para realizar una negación. Aplica estilos a elementos que NO coinciden con el selector:</p>
-            <pre><code>p:not(.classy) {
+        <h3>Pseudo-clase :not()</h3>
+        <p>Se emplea para realizar una negación. Aplica estilos a elementos que NO coinciden con el selector:</p>
+<pre><code>p:not(.classy) {
     color: red;
 }
 
 *:not(p) {
     margin: 0;
 }</code></pre>
-            <p>Tiene el mismo alcance que un selector universal.</p>
-            
-            <h3>Selector de Hijo Directo (&gt;)</h3>
-            <p>Selecciona elementos que son hijos directos de otro elemento:</p>
-            <pre><code>div &gt; p {
-    color: #990000;
-}</code></pre>
-            <p>Donde <code>div</code> es el elemento padre y <code>p</code> es el elemento hijo directo que se verá afectado.</p>
-            
-            <h3>Selector Adyacente (+)</h3>
-            <p>Selecciona el elemento inmediatamente siguiente a otro elemento específico:</p>
-            <pre><code>p.mitexto + p {
-    color: #990000;
-}</code></pre>
-            <p>El elemento <code>&lt;p&gt;</code> inmediatamente siguiente al elemento <code>p</code> con la clase <code>mitexto</code> se verá afectado por los estilos.</p>
-            
-            <h3>Selector de Hermanos (~)</h3>
-            <p>Aplica estilos a todos los elementos hermanos que aparecen después de un elemento específico:</p>
-            <pre><code>p.mitexto ~ p {
-    color: #990000;
-}</code></pre>
-            <p>El estilo será aplicado a todos los elementos <code>&lt;p&gt;</code> que son hermanos y se encuentran después del elemento <code>&lt;p&gt;</code> identificado con el valor <code>mitexto</code> en su atributo class.</p>
-        </section>
+        <p>Tiene el mismo alcance que un selector universal.</p>
         
-        <section id="fuentes">
-            <h2>Estilos para Fuentes</h2>
-            
-            <h3>font-family</h3>
-            <p>Establece la fuente o tipo de letra con la que se muestra el texto. Se pueden especificar fuentes alternativas separadas por comas. La lista tiene prioridad:</p>
-            <pre><code>body {
+        <h3>Selector de Hijo Directo (&gt;)</h3>
+        <p>Selecciona elementos que son hijos directos de otro elemento:</p>
+<pre><code>div &gt; p {
+    color: #990000;
+}</code></pre>
+        <p>Donde <code>div</code> es el elemento padre y <code>p</code> es el elemento hijo directo que se verá afectado.</p>
+        
+        <h3>Selector Adyacente (+)</h3>
+        <p>Selecciona el elemento inmediatamente siguiente a otro elemento específico:</p>
+<pre><code>p.mitexto + p {
+    color: #990000;
+}</code></pre>
+        <p>El elemento <code>&lt;p&gt;</code> inmediatamente siguiente al elemento <code>p</code> con la clase <code>mitexto</code> se verá afectado por los estilos.</p>
+        
+        <h3>Selector de Hermanos (~)</h3>
+        <p>Aplica estilos a todos los elementos hermanos que aparecen después de un elemento específico:</p>
+<pre><code>p.mitexto ~ p {
+    color: #990000;
+}</code></pre>
+        <p>El estilo será aplicado a todos los elementos <code>&lt;p&gt;</code> que son hermanos y se encuentran después del elemento <code>&lt;p&gt;</code> identificado con el valor <code>mitexto</code> en su atributo class.</p>
+    </section>
+    
+    <section id="fuentes">
+        <h2>Estilos para Fuentes</h2>
+        
+        <h3>font-family</h3>
+        <p>Establece la fuente o tipo de letra con la que se muestra el texto. Se pueden especificar fuentes alternativas separadas por comas. La lista tiene prioridad:</p>
+<pre><code>body {
     font-family: 'Arial', 'Helvetica', sans-serif;
 }</code></pre>
-            <p>Los navegadores intentan mostrar el texto con la primera fuente, y si no está disponible, usan la segunda y así sucesivamente.</p>
-            
-            <h3>font-size</h3>
-            <p>Establece el tamaño de letra del texto. Permite usar unidades absolutas y relativas (em, ex, px, %, in, mm, pt, pc):</p>
-            <pre><code>h1 {
+        <p>Los navegadores intentan mostrar el texto con la primera fuente, y si no está disponible, usan la segunda y así sucesivamente.</p>
+        
+        <h3>font-size</h3>
+        <p>Establece el tamaño de letra del texto. Permite usar unidades absolutas y relativas (em, ex, px, %, in, mm, pt, pc):</p>
+<pre><code>h1 {
     font-size: 2rem;
 }
 
@@ -226,20 +233,20 @@ p {
     font-size: smaller;
 }</code></pre>
             
-            <p><strong>Palabras clave absolutas:</strong></p>
-            <ul>
-                <li>xx-small, x-small, small, medium, large, x-large, xx-large</li>
-            </ul>
-            
-            <p><strong>Palabras clave relativas:</strong></p>
-            <ul>
-                <li><code>larger</code>: Más grande que el elemento contenedor</li>
-                <li><code>smaller</code>: Más pequeño que el elemento contenedor</li>
-            </ul>
-            
-            <h3>font-weight</h3>
-            <p>Controla el peso/grosor de la letra:</p>
-            <pre><code>.normal {
+        <p><strong>Palabras clave absolutas:</strong></p>
+        <ul>
+            <li>xx-small, x-small, small, medium, large, x-large, xx-large</li>
+        </ul>
+        
+        <p><strong>Palabras clave relativas:</strong></p>
+        <ul>
+            <li><code>larger</code>: Más grande que el elemento contenedor</li>
+            <li><code>smaller</code>: Más pequeño que el elemento contenedor</li>
+        </ul>
+        
+        <h3>font-weight</h3>
+        <p>Controla el peso/grosor de la letra:</p>
+<pre><code>.normal {
     font-weight: normal; /* o 400 */
 }
 
@@ -255,166 +262,167 @@ p {
     font-weight: 900;
 }</code></pre>
             
-            <p><strong>Valores disponibles:</strong></p>
-            <ul>
-                <li><strong>normal:</strong> Peso normal (igual que 400)</li>
-                <li><strong>bold:</strong> Grueso ancho/negritas (igual que 700)</li>
-                <li><strong>lighter:</strong> Menos grueso que el tipo del elemento padre</li>
-                <li><strong>bolder:</strong> Más grueso que el tipo del elemento padre</li>
-                <li><strong>100-900:</strong> Pesos numéricos para mayor flexibilidad</li>
-            </ul>
-        </section>
+        <p><strong>Valores disponibles:</strong></p>
+        <ul>
+            <li><strong>normal:</strong> Peso normal (igual que 400)</li>
+            <li><strong>bold:</strong> Grueso ancho/negritas (igual que 700)</li>
+            <li><strong>lighter:</strong> Menos grueso que el tipo del elemento padre</li>
+            <li><strong>bolder:</strong> Más grueso que el tipo del elemento padre</li>
+            <li><strong>100-900:</strong> Pesos numéricos para mayor flexibilidad</li>
+        </ul>
+    </section>
+    
+    <section id="background">
+        <h2>Propiedades de Background</h2>
         
-        <section id="background">
-            <h2>Propiedades de Background</h2>
-            
-            <h3>background-color</h3>
-            <p>Define el color de fondo de un elemento:</p>
-            <pre><code>body {
+        <h3>background-color</h3>
+        <p>Define el color de fondo de un elemento:</p>
+<pre><code>body {
     background-color: #ffffff;
 }</code></pre>
             
-            <h3>background-image</h3>
-            <p>Establece una imagen como fondo:</p>
-            <pre><code>header {
+        <h3>background-image</h3>
+        <p>Establece una imagen como fondo:</p>
+<pre><code>header {
     background-image: url('imagen.jpg');
 }</code></pre>
-            
-            <h3>background-repeat</h3>
-            <p>Controla la repetición de la imagen de fondo:</p>
-            <ul>
-                <li><strong>repeat:</strong> Repite en ambas direcciones (predeterminado)</li>
-                <li><strong>repeat-x:</strong> Solo horizontal</li>
-                <li><strong>repeat-y:</strong> Solo vertical</li>
-                <li><strong>no-repeat:</strong> No repite la imagen</li>
-            </ul>
-            
-            <h3>background-position</h3>
-            <p>Define la posición inicial de la imagen de fondo:</p>
-            <pre><code>div {
+        
+        <h3>background-repeat</h3>
+        <p>Controla la repetición de la imagen de fondo:</p>
+        <ul>
+            <li><strong>repeat:</strong> Repite en ambas direcciones (predeterminado)</li>
+            <li><strong>repeat-x:</strong> Solo horizontal</li>
+            <li><strong>repeat-y:</strong> Solo vertical</li>
+            <li><strong>no-repeat:</strong> No repite la imagen</li>
+        </ul>
+        
+        <h3>background-position</h3>
+        <p>Define la posición inicial de la imagen de fondo:</p>
+<pre><code>div {
     background-position: center center;
     background-position: right top;
     background-position: 50% 50%;
 }</code></pre>
             
-            <h3>Propiedad Abreviada (background)</h3>
-            <p>Para acortar el código, es posible especificar todas las propiedades de fondo en una sola propiedad:</p>
-            <pre><code>body {
+        <h3>Propiedad Abreviada (background)</h3>
+        <p>Para acortar el código, es posible especificar todas las propiedades de fondo en una sola propiedad:</p>
+<pre><code>body {
     background: #ffffff url('imagen.jpg') no-repeat right top;
 }</code></pre>
-            
-            <div class="demo-box">
-                Ejemplo de fondo con gradiente CSS3
-            </div>
-        </section>
         
-        <section id="bordes">
-            <h2>Bordes y Esquinas Redondeadas</h2>
-            
-            <h3>border-radius</h3>
-            <p>Con la propiedad CSS <code>border-radius</code> puede darle a cualquier elemento "esquinas redondeadas":</p>
-            <pre><code>.caja-redondeada {
+        <div class="demo-box">
+            Ejemplo de fondo con gradiente CSS3
+        </div>
+    </section>
+    
+    <section id="bordes">
+        <h2>Bordes y Esquinas Redondeadas</h2>
+        
+        <h3>border-radius</h3>
+        <p>Con la propiedad CSS <code>border-radius</code> puede darle a cualquier elemento "esquinas redondeadas":</p>
+<pre><code>.caja-redondeada {
     border-radius: 25px;
     background: #ffffff;
     padding: 20px;
 }</code></pre>
             
-            <h3>Control Individual de Esquinas</h3>
-            <p>La propiedad <code>border-radius</code> es en realidad una propiedad abreviada para:</p>
-            <ul>
-                <li>border-top-left-radius</li>
-                <li>border-top-right-radius</li>
-                <li>border-bottom-right-radius</li>
-                <li>border-bottom-left-radius</li>
-            </ul>
+        <h3>Control Individual de Esquinas</h3>
+        <p>La propiedad <code>border-radius</code> es en realidad una propiedad abreviada para:</p>
+        <ul>
+            <li>border-top-left-radius</li>
+            <li>border-top-right-radius</li>
+            <li>border-bottom-right-radius</li>
+            <li>border-bottom-left-radius</li>
+        </ul>
             
-            <pre><code>.esquinas-diferentes {
+<pre><code>.esquinas-diferentes {
     border-top-left-radius: 10px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 40px;
 }</code></pre>
             
-            <p>O usando la propiedad abreviada:</p>
-            <pre><code>.esquinas {
+        <p>O usando la propiedad abreviada:</p>
+<pre><code>.esquinas {
     border-radius: 10px 20px 30px 40px;
     /* top-left | top-right | bottom-right | bottom-left */
 }</code></pre>
             
-            <div class="demo-box demo-rounded">
-                Ejemplo de esquinas redondeadas personalizadas
-            </div>
-        </section>
-        
-        <section id="colores">
-            <h2>Tabla de Colores HTML</h2>
-            <p>Los colores utilizan formato <strong>RGB en Hexadecimal</strong>. Aquí algunos colores comunes:</p>
-            
-            <table>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Código Hex</th>
-                    <th>Muestra</th>
-                </tr>
-                <tr>
-                    <td>black</td>
-                    <td>#000000</td>
-                    <td class="color-sample" style="background: #000000;"></td>
-                </tr>
-                <tr>
-                    <td>white</td>
-                    <td>#FFFFFF</td>
-                    <td class="color-sample" style="background: #FFFFFF; border: 1px solid #ddd;"></td>
-                </tr>
-                <tr>
-                    <td>red</td>
-                    <td>#FF0000</td>
-                    <td class="color-sample" style="background: #FF0000;"></td>
-                </tr>
-                <tr>
-                    <td>blue</td>
-                    <td>#0000FF</td>
-                    <td class="color-sample" style="background: #0000FF;"></td>
-                </tr>
-                <tr>
-                    <td>lime</td>
-                    <td>#00FF00</td>
-                    <td class="color-sample" style="background: #00FF00;"></td>
-                </tr>
-                <tr>
-                    <td>yellow</td>
-                    <td>#FFFF00</td>
-                    <td class="color-sample" style="background: #FFFF00;"></td>
-                </tr>
-                <tr>
-                    <td>purple</td>
-                    <td>#800080</td>
-                    <td class="color-sample" style="background: #800080;"></td>
-                </tr>
-                <tr>
-                    <td>teal</td>
-                    <td>#008080</td>
-                    <td class="color-sample" style="background: #008080;"></td>
-                </tr>
-                <tr>
-                    <td>navy</td>
-                    <td>#000080</td>
-                    <td class="color-sample" style="background: #000080;"></td>
-                </tr>
-                <tr>
-                    <td>olive</td>
-                    <td>#88AA00</td>
-                    <td class="color-sample" style="background: #88AA00;"></td>
-                </tr>
-            </table>
-        </section>
-        
-        <a href="html-basico.html" class="link-button">Volver a Tutorial HTML</a>
-    </main>
+        <div class="demo-box demo-rounded">
+            Ejemplo de esquinas redondeadas personalizadas
+        </div>
+    </section>
     
+    <section id="colores">
+        <h2>Tabla de Colores HTML</h2>
+        <p>Los colores utilizan formato <strong>RGB en Hexadecimal</strong>. Aquí algunos colores comunes:</p>
+        
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Código Hex</th>
+                <th>Muestra</th>
+            </tr>
+            <tr>
+                <td>black</td>
+                <td>#000000</td>
+                <td class="color-sample" style="background: #000000;"></td>
+            </tr>
+            <tr>
+                <td>white</td>
+                <td>#FFFFFF</td>
+                <td class="color-sample" style="background: #FFFFFF; border: 1px solid #ddd;"></td>
+            </tr>
+            <tr>
+                <td>red</td>
+                <td>#FF0000</td>
+                <td class="color-sample" style="background: #FF0000;"></td>
+            </tr>
+            <tr>
+                <td>blue</td>
+                <td>#0000FF</td>
+                <td class="color-sample" style="background: #0000FF;"></td>
+            </tr>
+            <tr>
+                <td>lime</td>
+                <td>#00FF00</td>
+                <td class="color-sample" style="background: #00FF00;"></td>
+            </tr>
+            <tr>
+                <td>yellow</td>
+                <td>#FFFF00</td>
+                <td class="color-sample" style="background: #FFFF00;"></td>
+            </tr>
+            <tr>
+                <td>purple</td>
+                <td>#800080</td>
+                <td class="color-sample" style="background: #800080;"></td>
+            </tr>
+            <tr>
+                <td>teal</td>
+                <td>#008080</td>
+                <td class="color-sample" style="background: #008080;"></td>
+            </tr>
+            <tr>
+                <td>navy</td>
+                <td>#000080</td>
+                <td class="color-sample" style="background: #000080;"></td>
+            </tr>
+            <tr>
+                <td>olive</td>
+                <td>#88AA00</td>
+                <td class="color-sample" style="background: #88AA00;"></td>
+            </tr>
+        </table>
+    </section>
+        
+    <a href="html-basico.html" class="link-button">Volver a Tutorial HTML</a>
+    <a href="../index.html" class="link-button">Volver al inicio</a>
+        
     <footer>
         <p>&copy; 2025 Tutorial de CSS3 | Diseño Web</p>
         <p>Aprende a estilizar sitios web modernos</p>
     </footer>
+
 </body>
 </html>
