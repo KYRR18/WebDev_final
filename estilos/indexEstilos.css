@@ -9,7 +9,11 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
+<<<<<<< HEAD
     background-image: url('../media/photos_wrinkled-paper-white.jpg');   
+=======
+    background: #667eea;
+>>>>>>> 1bb4524 (Se redujeron los archivos y se modifico el ascpeto de "html-)
     min-height: 100vh;
 }
 
