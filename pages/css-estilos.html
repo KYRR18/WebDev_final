@@ -3,510 +3,418 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Estilos - Tutorial HTML5 y CSS3</title>
-    <link rel="stylesheet" href="estilos/css-avanzado.css">
+    <meta name="keywords" content="CSS, CSS3, estilos, diseño web, tutorial">
+    <title>Tutorial de CSS3 - Guía Completa</title>
+    <link rel="stylesheet" type="text/css" href="../estilos/css-basico.css">
 </head>
 <body>
     <header>
-        <h1>CSS Estilos</h1>
-        <p class="subtitle">Propiedades de Texto, Fuentes, Colores y Efectos Visuales</p>
+        <h1>Tutorial Completo de CSS3</h1>
+        <p>Cascade Style Sheets - Diseña y estiliza tus páginas web</p>
     </header>
-
+    
     <nav>
         <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="html-basico.html">HTML Básico</a></li>
-            <li><a href="html-avanzado.html">HTML Avanzado</a></li>
-            <li><a href="css-fundamentos.html">CSS Fundamentos</a></li>
-            <li><a href="css-estilos.html" class="active">CSS Estilos</a></li>
-            <li><a href="recursos.html">Recursos</a></li>
-            <li><a href="ejercicios.html">Ejercicios</a></li>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#estructura">Estructura</a></li>
+            <li><a href="#metodos">Métodos</a></li>
+            <li><a href="#selectores">Selectores</a></li>
+            <li><a href="#fuentes">Fuentes</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#bordes">Bordes</a></li>
         </ul>
     </nav>
-
-
-    <!-- PROPIEDADES DE FUENTES -->
-    <section>
-        <h2>Propiedades de Fuentes</h2>
-        <p>CSS ofrece múltiples propiedades para controlar la apariencia del texto.</p>
-    </section>
-
-    <!-- FONT-WEIGHT -->
-    <section>
-        <h2>font-weight (Grosor del Texto)</h2>
-        <p>Controla el grosor o peso de la fuente.</p>
-
-        <h3>Valores disponibles:</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Valor</th>
-                    <th>Descripción</th>
-                    <th>Equivalente Numérico</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><code>normal</code></td>
-                    <td>Peso normal de la letra</td>
-                    <td>400</td>
-                </tr>
-                <tr>
-                    <td><code>bold</code></td>
-                    <td>Texto en negrita</td>
-                    <td>700</td>
-                </tr>
-                <tr>
-                    <td><code>lighter</code></td>
-                    <td>Más delgado que el elemento padre</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td><code>bolder</code></td>
-                    <td>Más grueso que el elemento padre</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td><code>100-900</code></td>
-                    <td>Valores numéricos (múltiplos de 100)</td>
-                    <td>100 (delgado) a 900 (negro)</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="ejemplo">
-            <h4>Ejemplos:</h4>
-            <pre><code>p {
-font-weight: normal;  /* 400 */
-}
-
-h1 {
-font-weight: bold;    /* 700 */
-}
-
-.delgado {
-font-weight: 300;
-}
-
-.extra-bold {
-font-weight: 800;
-}</code></pre>
-        </div>
-
-        <div class="demo-weights">
-            <p style="font-weight: 100;">100 - Thin</p>
-            <p style="font-weight: 300;">300 - Light</p>
-            <p style="font-weight: 400;">400 - Normal</p>
-            <p style="font-weight: 500;">500 - Medium</p>
-            <p style="font-weight: 700;">700 - Bold</p>
-            <p style="font-weight: 900;">900 - Black</p>
-        </div>
-    </section>
-
-    <!-- FONT-SIZE -->
-    <section>
-        <h2>font-size (Tamaño del Texto)</h2>
-        <p>Establece el tamaño de la letra del texto.</p>
-
-        <h3>Unidades de Medida</h3>
+    
+    <main>
+        <section id="introduccion">
+            <h2>¿Qué es CSS?</h2>
+            <p><strong>CSS (Cascade Style Sheets)</strong> es un lenguaje que trabaja junto con HTML para proveer estilos visuales a los elementos del documento, como tamaño, color, fondo, bordes, etc.</p>
+            
+            <p>HTML5 y CSS3 son dos tecnologías diferentes que se complementan. CSS no forma parte de las especificaciones de HTML5.</p>
+            
+            <h3>Conceptos Básicos</h3>
+            <p>CSS permite controlar la presentación visual de elementos HTML, separando el contenido (HTML) de la presentación (CSS). Esto facilita el mantenimiento y la actualización de sitios web.</p>
+        </section>
         
-        <h4>Unidades Absolutas:</h4>
-        <ul>
-            <li><code>px</code> (píxeles): Más común, tamaño fijo</li>
-            <li><code>pt</code> (puntos): Usado principalmente en impresión</li>
-            <li><code>cm</code>, <code>mm</code>, <code>in</code>: Medidas físicas</li>
-        </ul>
-
-        <h4>Unidades Relativas:</h4>
-        <ul>
-            <li><code>em</code>: Relativo al tamaño de fuente del elemento padre</li>
-            <li><code>rem</code>: Relativo al tamaño de fuente raíz (html)</li>
-            <li><code>%</code>: Porcentaje relativo al padre</li>
-            <li><code>vw/vh</code>: Relativo al viewport (ancho/alto de ventana)</li>
-        </ul>
-
-        <h4>Palabras Clave Absolutas:</h4>
-        <ul>
-            <li><code>xx-small</code>, <code>x-small</code>, <code>small</code></li>
-            <li><code>medium</code> (valor por defecto)</li>
-            <li><code>large</code>, <code>x-large</code>, <code>xx-large</code></li>
-        </ul>
-
-        <h4>Palabras Clave Relativas:</h4>
-        <ul>
-            <li><code>larger</code>: Más grande que el padre</li>
-            <li><code>smaller</code>: Más pequeño que el padre</li>
-        </ul>
-
-        <div class="ejemplo">
-            <h4>Ejemplos:</h4>
-            <pre><code>body {
-font-size: 16px;  /* Tamaño base */
+        <section id="estructura">
+            <h2>Estructura y Modelo de Caja</h2>
+            
+            <h3>Estructura de Bloque</h3>
+            <p>Cada navegador implementa una estructura por defecto con dos tipos principales de elementos:</p>
+            
+            <h4>Elementos Block</h4>
+            <p>Se posicionan uno sobre otro hacia abajo en la página. Ejemplos: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;p&gt;</code></p>
+            
+            <h4>Elementos Inline-Block</h4>
+            <p>Se posicionan lado a lado en la misma línea, sin salto de línea a menos que no haya más espacio horizontal. Ejemplos: <code>&lt;span&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code></p>
+            
+            <div class="inline-block-demo">
+                <span>Elemento 1</span>
+                <span>Elemento 2</span>
+                <span>Elemento 3</span>
+            </div>
+            
+            <h3>Modelo de Caja</h3>
+            <p>Todas las reglas que especifican la disposición de una página web se denominan "Modelo de caja". Cada elemento HTML es una caja rectangular con:</p>
+            <ul>
+                <li><strong>Contenido:</strong> El área donde aparece el texto o las imágenes</li>
+                <li><strong>Padding:</strong> Espacio entre el contenido y el borde (relleno interno)</li>
+                <li><strong>Border:</strong> El borde que rodea el padding y el contenido</li>
+                <li><strong>Margin:</strong> Espacio exterior que separa el elemento de otros (margen externo)</li>
+            </ul>
+        </section>
+        
+        <section id="metodos">
+            <h2>Métodos de Aplicación de CSS</h2>
+            
+            <h3>1. Estilos en Línea</h3>
+            <p>Forma simple, rudimentaria y poco práctica. Se aplican directamente en el elemento HTML usando el atributo <code>style</code>:</p>
+            <pre><code>&lt;p style="font-size: 20px; color: blue;"&gt;Esto es un párrafo&lt;/p&gt;</code></pre>
+            <p><strong>Desventaja:</strong> Difícil de mantener y actualizar en sitios grandes.</p>
+            
+            <h3>2. Estilos Embebidos</h3>
+            <p>Una mejor alternativa es insertar los estilos en la cabecera del documento usando la etiqueta <code>&lt;style&gt;</code>:</p>
+            <pre><code>&lt;head&gt;
+    &lt;style&gt;
+        p {
+            font-size: 20px;
+            color: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+            <p>Ahora todas las etiquetas <code>&lt;p&gt;</code> se verán afectadas por estos estilos.</p>
+            
+            <h3>3. Archivos Externos (Recomendado)</h3>
+            <p>Este método tiene más ventajas para facilitar la actualización de los estilos. Se implementa mediante el uso de la etiqueta <code>&lt;link&gt;</code>:</p>
+            <pre><code>&lt;head&gt;
+    &lt;link rel="stylesheet" type="text/css" href="css/estilos.css"&gt;
+&lt;/head&gt;</code></pre>
+            <p><strong>Ventajas:</strong></p>
+            <ul>
+                <li>Un solo archivo CSS puede estilizar múltiples páginas HTML</li>
+                <li>Fácil mantenimiento y actualización</li>
+                <li>Mejor organización del código</li>
+                <li>Caché del navegador mejora el rendimiento</li>
+            </ul>
+        </section>
+        
+        <section id="sintaxis">
+            <h2>Sintaxis de CSS</h2>
+            
+            <p>Un conjunto de reglas CSS consiste en un <strong>selector</strong> y un <strong>bloque de declaración</strong>:</p>
+            
+            <pre><code>h1 {
+    color: blue;
+    font-size: 12px;
+}</code></pre>
+            
+            <p><strong>Componentes:</strong></p>
+            <ul>
+                <li><strong>Selector:</strong> h1 (apunta al elemento HTML que desea diseñar)</li>
+                <li><strong>Propiedades:</strong> color, font-size (características a modificar)</li>
+                <li><strong>Valores:</strong> blue, 12px (valores asignados a las propiedades)</li>
+            </ul>
+            
+            <p>El bloque de declaración contiene una o más declaraciones separadas por punto y coma. Cada declaración incluye un nombre de propiedad CSS y un valor, separados por dos puntos. Una declaración de CSS siempre termina con punto y coma, y los bloques de declaración están rodeados de llaves.</p>
+        </section>
+        
+        <section id="selectores">
+            <h2>Selectores CSS</h2>
+            
+            <h3>Selector Universal (*)</h3>
+            <p>Representa cada uno de los elementos del documento. Es útil cuando necesitamos establecer ciertas reglas básicas:</p>
+            <pre><code>* {
+    margin: 0;
+    padding: 0;
+}</code></pre>
+            
+            <h3>Selector por Etiqueta</h3>
+            <p>Selecciona todos los elementos de un tipo específico:</p>
+            <pre><code>p {
+    color: #333;
+    line-height: 1.6;
+}</code></pre>
+            
+            <h3>Selector por ID (#)</h3>
+            <p>Referencia un elemento específico mediante su atributo <code>id</code>. El ID debe ser único en el documento:</p>
+            <pre><code>#articulo {
+    font-size: 20px;
 }
 
-h1 {
-font-size: 2.5em;  /* 2.5 veces el tamaño del padre */
+p#aside {
+    color: red;
+}</code></pre>
+            
+            <div class="selector-example">
+                <pre><code>&lt;p id="articulo"&gt;Texto del artículo&lt;/p&gt;
+&lt;p id="aside"&gt;Texto del aside&lt;/p&gt;</code></pre>
+            </div>
+            
+            <p><strong>Notas importantes:</strong></p>
+            <ul>
+                <li>Es una referencia sumamente específica</li>
+                <li>No debe haber más de un elemento con el mismo ID</li>
+                <li>Normalmente se emplean IDs para elementos estructurales</li>
+                <li>Suele emplearse más en JavaScript</li>
+            </ul>
+            
+            <h3>Selector por Clase (.)</h3>
+            <p>Más flexible que el ID. Puede ser asignado a múltiples elementos HTML que comparten un diseño similar:</p>
+            <pre><code>.destacado {
+    background: yellow;
+    font-weight: bold;
+}
+
+p.especial {
+    color: green;
+}</code></pre>
+            
+            <h3>Pseudo-clase :not()</h3>
+            <p>Se emplea para realizar una negación. Aplica estilos a elementos que NO coinciden con el selector:</p>
+            <pre><code>p:not(.classy) {
+    color: red;
+}
+
+*:not(p) {
+    margin: 0;
+}</code></pre>
+            <p>Tiene el mismo alcance que un selector universal.</p>
+            
+            <h3>Selector de Hijo Directo (&gt;)</h3>
+            <p>Selecciona elementos que son hijos directos de otro elemento:</p>
+            <pre><code>div &gt; p {
+    color: #990000;
+}</code></pre>
+            <p>Donde <code>div</code> es el elemento padre y <code>p</code> es el elemento hijo directo que se verá afectado.</p>
+            
+            <h3>Selector Adyacente (+)</h3>
+            <p>Selecciona el elemento inmediatamente siguiente a otro elemento específico:</p>
+            <pre><code>p.mitexto + p {
+    color: #990000;
+}</code></pre>
+            <p>El elemento <code>&lt;p&gt;</code> inmediatamente siguiente al elemento <code>p</code> con la clase <code>mitexto</code> se verá afectado por los estilos.</p>
+            
+            <h3>Selector de Hermanos (~)</h3>
+            <p>Aplica estilos a todos los elementos hermanos que aparecen después de un elemento específico:</p>
+            <pre><code>p.mitexto ~ p {
+    color: #990000;
+}</code></pre>
+            <p>El estilo será aplicado a todos los elementos <code>&lt;p&gt;</code> que son hermanos y se encuentran después del elemento <code>&lt;p&gt;</code> identificado con el valor <code>mitexto</code> en su atributo class.</p>
+        </section>
+        
+        <section id="fuentes">
+            <h2>Estilos para Fuentes</h2>
+            
+            <h3>font-family</h3>
+            <p>Establece la fuente o tipo de letra con la que se muestra el texto. Se pueden especificar fuentes alternativas separadas por comas. La lista tiene prioridad:</p>
+            <pre><code>body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+}</code></pre>
+            <p>Los navegadores intentan mostrar el texto con la primera fuente, y si no está disponible, usan la segunda y así sucesivamente.</p>
+            
+            <h3>font-size</h3>
+            <p>Establece el tamaño de letra del texto. Permite usar unidades absolutas y relativas (em, ex, px, %, in, mm, pt, pc):</p>
+            <pre><code>h1 {
+    font-size: 2rem;
 }
 
 p {
-font-size: 1rem;   /* Igual al tamaño base */
+    font-size: 16px;
 }
 
 .pequeño {
-font-size: 12px;
-}
-
-.grande {
-font-size: x-large;
+    font-size: smaller;
 }</code></pre>
-        </div>
-
-        <div class="nota">
-            <strong>Recomendación:</strong> Usar <code>rem</code> para mayor accesibilidad y facilidad de mantenimiento.
-        </div>
-    </section>
-
-    <!-- FONT-FAMILY -->
-    <section>
-        <h2>font-family (Tipo de Fuente)</h2>
-        <p>Establece la fuente o tipo de letra con la que se muestra el texto.</p>
-
-        <h3>Familias Genéricas</h3>
-        <ul>
-            <li><code>serif</code>: Fuentes con remates (ej: Times New Roman)</li>
-            <li><code>sans-serif</code>: Fuentes sin remates (ej: Arial, Helvetica)</li>
-            <li><code>monospace</code>: Fuentes de ancho fijo (ej: Courier)</li>
-            <li><code>cursive</code>: Fuentes que parecen escritas a mano</li>
-            <li><code>fantasy</code>: Fuentes decorativas</li>
-        </ul>
-
-        <div class="ejemplo">
-            <h4>Sintaxis con fuentes alternativas:</h4>
-            <pre><code>body {
-font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 {
-font-family: "Times New Roman", Times, serif;
-}
-
-code {
-font-family: "Courier New", Courier, monospace;
-}
-
-.elegante {
-font-family: Georgia, "Palatino Linotype", serif;
-}</code></pre>
-        </div>
-
-        <div class="nota">
-            <strong>Importante:</strong>
+            
+            <p><strong>Palabras clave absolutas:</strong></p>
             <ul>
-                <li>Listar fuentes en orden de prioridad</li>
-                <li>Siempre terminar con una familia genérica</li>
-                <li>Usar comillas para nombres con espacios</li>
+                <li>xx-small, x-small, small, medium, large, x-large, xx-large</li>
             </ul>
-        </div>
+            
+            <p><strong>Palabras clave relativas:</strong></p>
+            <ul>
+                <li><code>larger</code>: Más grande que el elemento contenedor</li>
+                <li><code>smaller</code>: Más pequeño que el elemento contenedor</li>
+            </ul>
+            
+            <h3>font-weight</h3>
+            <p>Controla el peso/grosor de la letra:</p>
+            <pre><code>.normal {
+    font-weight: normal; /* o 400 */
+}
 
-        <h3>Fuentes Web (Google Fonts)</h3>
-        <div class="ejemplo">
-            <h4>Importar desde Google Fonts:</h4>
-            <pre><code>&lt;head&gt;
-&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" 
-        rel="stylesheet"&gt;
-&lt;/head&gt;</code></pre>
+.bold {
+    font-weight: bold; /* o 700 */
+}
 
-            <h4>Usar en CSS:</h4>
+.ligero {
+    font-weight: 300;
+}
+
+.muy-grueso {
+    font-weight: 900;
+}</code></pre>
+            
+            <p><strong>Valores disponibles:</strong></p>
+            <ul>
+                <li><strong>normal:</strong> Peso normal (igual que 400)</li>
+                <li><strong>bold:</strong> Grueso ancho/negritas (igual que 700)</li>
+                <li><strong>lighter:</strong> Menos grueso que el tipo del elemento padre</li>
+                <li><strong>bolder:</strong> Más grueso que el tipo del elemento padre</li>
+                <li><strong>100-900:</strong> Pesos numéricos para mayor flexibilidad</li>
+            </ul>
+        </section>
+        
+        <section id="background">
+            <h2>Propiedades de Background</h2>
+            
+            <h3>background-color</h3>
+            <p>Define el color de fondo de un elemento:</p>
             <pre><code>body {
-font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
 }</code></pre>
-        </div>
-    </section>
-
-    <!-- COLORES Y FONDOS -->
-    <section>
-        <h2>Colores en CSS</h2>
-        <p>CSS ofrece múltiples formas de especificar colores.</p>
-
-        <h3>Formatos de Color</h3>
-
-        <h4>1. Nombres de Colores</h4>
-        <div class="ejemplo">
-            <pre><code>color: red;
-background-color: blue;
-border-color: green;</code></pre>
-        </div>
-
-        <h4>2. Hexadecimal (RGB)</h4>
-        <div class="ejemplo">
-            <pre><code>color: #FF0000;        /* Rojo */
-color: #00FF00;        /* Verde */
-color: #0000FF;        /* Azul */
-color: #F00;           /* Rojo (forma corta) */</code></pre>
-        </div>
-
-        <h4>3. RGB y RGBA</h4>
-        <div class="ejemplo">
-            <pre><code>color: rgb(255, 0, 0);           /* Rojo */
-color: rgb(0, 255, 0);           /* Verde */
-color: rgba(0, 0, 255, 0.5);     /* Azul semi-transparente */</code></pre>
-        </div>
-
-        <h4>4. HSL y HSLA</h4>
-        <div class="ejemplo">
-            <pre><code>color: hsl(0, 100%, 50%);        /* Rojo */
-color: hsl(120, 100%, 50%);      /* Verde */
-color: hsla(240, 100%, 50%, 0.5); /* Azul semi-transparente */</code></pre>
-        </div>
-
-        <div class="color-palette">
-            <div class="color-box" style="background: #e74c3c;">#e74c3c</div>
-            <div class="color-box" style="background: #3498db;">#3498db</div>
-            <div class="color-box" style="background: #2ecc71;">#2ecc71</div>
-            <div class="color-box" style="background: #f39c12;">#f39c12</div>
-            <div class="color-box" style="background: #9b59b6;">#9b59b6</div>
-        </div>
-    </section>
-
-    <!-- BACKGROUND -->
-    <section>
-        <h2>Propiedades de Fondo (Background)</h2>
-
-        <h3>background-color</h3>
-        <div class="ejemplo">
+            
+            <h3>background-image</h3>
+            <p>Establece una imagen como fondo:</p>
+            <pre><code>header {
+    background-image: url('imagen.jpg');
+}</code></pre>
+            
+            <h3>background-repeat</h3>
+            <p>Controla la repetición de la imagen de fondo:</p>
+            <ul>
+                <li><strong>repeat:</strong> Repite en ambas direcciones (predeterminado)</li>
+                <li><strong>repeat-x:</strong> Solo horizontal</li>
+                <li><strong>repeat-y:</strong> Solo vertical</li>
+                <li><strong>no-repeat:</strong> No repite la imagen</li>
+            </ul>
+            
+            <h3>background-position</h3>
+            <p>Define la posición inicial de la imagen de fondo:</p>
+            <pre><code>div {
+    background-position: center center;
+    background-position: right top;
+    background-position: 50% 50%;
+}</code></pre>
+            
+            <h3>Propiedad Abreviada (background)</h3>
+            <p>Para acortar el código, es posible especificar todas las propiedades de fondo en una sola propiedad:</p>
             <pre><code>body {
-background-color: #f0f0f0;
-}
-
-.destacado {
-background-color: rgba(52, 152, 219, 0.2);
+    background: #ffffff url('imagen.jpg') no-repeat right top;
 }</code></pre>
-        </div>
-
-        <h3>background-image</h3>
-        <div class="ejemplo">
-            <pre><code>body {
-background-image: url('imagenes/fondo.jpg');
-}
-
-.patron {
-background-image: url('patron.png');
+            
+            <div class="demo-box">
+                Ejemplo de fondo con gradiente CSS3
+            </div>
+        </section>
+        
+        <section id="bordes">
+            <h2>Bordes y Esquinas Redondeadas</h2>
+            
+            <h3>border-radius</h3>
+            <p>Con la propiedad CSS <code>border-radius</code> puede darle a cualquier elemento "esquinas redondeadas":</p>
+            <pre><code>.caja-redondeada {
+    border-radius: 25px;
+    background: #ffffff;
+    padding: 20px;
 }</code></pre>
-        </div>
-
-        <h3>background-repeat</h3>
-        <div class="ejemplo">
-            <pre><code>div {
-background-image: url('logo.png');
-background-repeat: no-repeat;  /* no-repeat, repeat, repeat-x, repeat-y */
+            
+            <h3>Control Individual de Esquinas</h3>
+            <p>La propiedad <code>border-radius</code> es en realidad una propiedad abreviada para:</p>
+            <ul>
+                <li>border-top-left-radius</li>
+                <li>border-top-right-radius</li>
+                <li>border-bottom-right-radius</li>
+                <li>border-bottom-left-radius</li>
+            </ul>
+            
+            <pre><code>.esquinas-diferentes {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 40px;
 }</code></pre>
-        </div>
-
-        <h3>background-position</h3>
-        <div class="ejemplo">
-            <pre><code>div {
-background-position: center;     /* center, top, bottom, left, right */
-background-position: 50% 50%;    /* Usando porcentajes */
-background-position: 10px 20px;  /* Usando píxeles */
+            
+            <p>O usando la propiedad abreviada:</p>
+            <pre><code>.esquinas {
+    border-radius: 10px 20px 30px 40px;
+    /* top-left | top-right | bottom-right | bottom-left */
 }</code></pre>
-        </div>
-
-        <h3>background-size</h3>
-        <div class="ejemplo">
-            <pre><code>div {
-background-size: cover;     /* Cubre todo el contenedor */
-background-size: contain;   /* Se ajusta dentro del contenedor */
-background-size: 100px 200px; /* Tamaño específico */
-}</code></pre>
-        </div>
-
-        <h3>Propiedad Abreviada (Shorthand)</h3>
-        <p>Puedes especificar todas las propiedades de fondo en una sola línea.</p>
-
-        <div class="ejemplo">
-            <pre><code>body {
-background: #ffffff url("fondo.jpg") no-repeat center center;
-}
-
-/* Equivale a: */
-body {
-background-color: #ffffff;
-background-image: url("fondo.jpg");
-background-repeat: no-repeat;
-background-position: center center;
-}</code></pre>
-        </div>
-
-        <h3>Gradientes</h3>
-        <div class="ejemplo">
-            <h4>Gradiente Lineal:</h4>
-            <pre><code>div {
-background: linear-gradient(to right, #ff0000, #00ff00);
-background: linear-gradient(45deg, #3498db, #8e44ad);
-}</code></pre>
-
-            <h4>Gradiente Radial:</h4>
-            <pre><code>div {
-background: radial-gradient(circle, #3498db, #2ecc71);
-}</code></pre>
-        </div>
-
-        <div class="gradient-demo">
-            <div class="grad1">Gradiente 1</div>
-            <div class="grad2">Gradiente 2</div>
-            <div class="grad3">Gradiente 3</div>
-        </div>
-    </section>
-
-    <!-- BORDES -->
-    <section>
-        <h2>Bordes (Border)</h2>
-
-        <h3>Propiedades de Borde</h3>
-        <div class="ejemplo">
-            <pre><code>div {
-border-width: 2px;           /* Grosor */
-border-style: solid;         /* Estilo */
-border-color: #3498db;       /* Color */
-}
-
-/* Forma abreviada: */
-div {
-border: 2px solid #3498db;
-}</code></pre>
-        </div>
-
-        <h3>Estilos de Borde</h3>
-        <ul>
-            <li><code>solid</code>: Línea sólida</li>
-            <li><code>dashed</code>: Línea discontinua</li>
-            <li><code>dotted</code>: Línea punteada</li>
-            <li><code>double</code>: Línea doble</li>
-            <li><code>groove</code>, <code>ridge</code>, <code>inset</code>, <code>outset</code>: Efectos 3D</li>
-            <li><code>none</code>: Sin borde</li>
-        </ul>
-
-        <div class="border-demo">
-            <div class="border-solid">solid</div>
-            <div class="border-dashed">dashed</div>
-            <div class="border-dotted">dotted</div>
-            <div class="border-double">double</div>
-        </div>
-
-        <h3>Bordes Individuales</h3>
-        <div class="ejemplo">
-            <pre><code>div {
-border-top: 3px solid red;
-border-right: 2px dashed blue;
-border-bottom: 1px dotted green;
-border-left: 4px double orange;
-}</code></pre>
-        </div>
-    </section>
-
-    <!-- BORDER-RADIUS -->
-    <section>
-        <h2>border-radius (Esquinas Redondeadas)</h2>
-        <p>Permite crear esquinas redondeadas en los elementos.</p>
-
-        <div class="ejemplo">
-            <h4>Sintaxis básica:</h4>
-            <pre><code>div {
-border-radius: 10px;        /* Todas las esquinas */
-border-radius: 50%;         /* Círculo perfecto */
-}
-
-/* Esquinas individuales: */
-div {
-border-radius: 10px 20px 30px 40px;
-/* top-left, top-right, bottom-right, bottom-left */
-}</code></pre>
-        </div>
-
-        <h3>Propiedades Individuales</h3>
-        <div class="ejemplo">
-            <pre><code>div {
-border-top-left-radius: 10px;
-border-top-right-radius: 20px;
-border-bottom-right-radius: 30px;
-border-bottom-left-radius: 40px;
-}</code></pre>
-        </div>
-
-        <div class="radius-demo">
-            <div class="radius1">10px</div>
-            <div class="radius2">25px</div>
-            <div class="radius3">50%</div>
-            <div class="radius4">Custom</div>
-        </div>
-
-        <div class="nota">
-            <strong>Tip:</strong> Para crear un círculo perfecto, el elemento debe tener el mismo ancho y alto, y usar <code>border-radius: 50%</code>.
-        </div>
-    </section>
-
-    <!-- TEXT PROPERTIES -->
-    <section>
-        <h2>Otras Propiedades de Texto</h2>
-
-        <h3>text-align</h3>
-        <div class="ejemplo">
-            <pre><code>p {
-text-align: left;    /* left, right, center, justify */
-}</code></pre>
-        </div>
-
-        <h3>text-decoration</h3>
-        <div class="ejemplo">
-            <pre><code>a {
-text-decoration: none;       /* Quitar subrayado */
-}
-
-.subrayado {
-text-decoration: underline;
-}
-
-.tachado {
-text-decoration: line-through;
-}</code></pre>
-        </div>
-
-        <h3>text-transform</h3>
-        <div class="ejemplo">
-            <pre><code>h1 {
-text-transform: uppercase;   /* MAYÚSCULAS */
-}
-
-h2 {
-text-transform: lowercase;   /* minúsculas */
-}
-
-h3 {
-text-transform: capitalize;  /* Capitalize Each Word */
-}</code></pre>
-        </div>
-
-        <h3>line-height</h3>
-        <div class="ejemplo">
-            <pre><code>p {
-line-height: 1.6;    /* Espaciado entre líneas */
-}</code></pre>
-        </div>
-
-        <h3>letter-spacing y word-spacing</h3>
-        <div class="ejemplo">
-            <pre><code>.espaciado {
-letter-spacing: 2px;    /* Espacio entre letras */
-word-spacing: 5px;      /* Espacio entre palabras */
-}</code></pre>
-        </div>
-    </section>
-
-    <a href="../index.html" class="btn-back">← Volver al Inicio</a>
-
-
+            
+            <div class="demo-box demo-rounded">
+                Ejemplo de esquinas redondeadas personalizadas
+            </div>
+        </section>
+        
+        <section id="colores">
+            <h2>Tabla de Colores HTML</h2>
+            <p>Los colores utilizan formato <strong>RGB en Hexadecimal</strong>. Aquí algunos colores comunes:</p>
+            
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Código Hex</th>
+                    <th>Muestra</th>
+                </tr>
+                <tr>
+                    <td>black</td>
+                    <td>#000000</td>
+                    <td class="color-sample" style="background: #000000;"></td>
+                </tr>
+                <tr>
+                    <td>white</td>
+                    <td>#FFFFFF</td>
+                    <td class="color-sample" style="background: #FFFFFF; border: 1px solid #ddd;"></td>
+                </tr>
+                <tr>
+                    <td>red</td>
+                    <td>#FF0000</td>
+                    <td class="color-sample" style="background: #FF0000;"></td>
+                </tr>
+                <tr>
+                    <td>blue</td>
+                    <td>#0000FF</td>
+                    <td class="color-sample" style="background: #0000FF;"></td>
+                </tr>
+                <tr>
+                    <td>lime</td>
+                    <td>#00FF00</td>
+                    <td class="color-sample" style="background: #00FF00;"></td>
+                </tr>
+                <tr>
+                    <td>yellow</td>
+                    <td>#FFFF00</td>
+                    <td class="color-sample" style="background: #FFFF00;"></td>
+                </tr>
+                <tr>
+                    <td>purple</td>
+                    <td>#800080</td>
+                    <td class="color-sample" style="background: #800080;"></td>
+                </tr>
+                <tr>
+                    <td>teal</td>
+                    <td>#008080</td>
+                    <td class="color-sample" style="background: #008080;"></td>
+                </tr>
+                <tr>
+                    <td>navy</td>
+                    <td>#000080</td>
+                    <td class="color-sample" style="background: #000080;"></td>
+                </tr>
+                <tr>
+                    <td>olive</td>
+                    <td>#88AA00</td>
+                    <td class="color-sample" style="background: #88AA00;"></td>
+                </tr>
+            </table>
+        </section>
+        
+        <a href="tutorial-html.html" class="link-button">Volver a Tutorial HTML</a>
+    </main>
+    
     <footer>
-        <p>&copy; 2024 Tutorial HTML5 y CSS3 | CSS Estilos</p>
+        <p>&copy; 2025 Tutorial de CSS3 | Diseño Web</p>
+        <p>Aprende a estilizar sitios web modernos</p>
     </footer>
 </body>
 </html>

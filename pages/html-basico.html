@@ -3,308 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Básico - Tutorial HTML5 y CSS3</title>
-    <link rel="stylesheet" href="estilos/html-basico.css">
+    <meta name="keywords" content="HTML, HTML5, desarrollo web, tutorial">
+    <title>Tutorial de HTML5 - Guía Completa</title>
+    <link rel="stylesheet" type="text/css" href="../estilos/css-basico.css">
 </head>
 <body>
     <header>
-        <h1>HTML Básico</h1>
-        <p class="subtitle">Fundamentos de HTML5</p>
+        <h1>Tutorial Completo de HTML5</h1>
+        <p>Aprende desarrollo web desde lo básico hasta lo avanzado</p>
     </header>
-
+    
     <nav>
         <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="html-basico.html" class="active">HTML Básico</a></li>
-            <li><a href="html-avanzado.html">HTML Avanzado</a></li>
-            <li><a href="css-fundamentos.html">CSS Fundamentos</a></li>
-            <li><a href="css-estilos.html">CSS Estilos</a></li>
-            <li><a href="recursos.html">Recursos</a></li>
-            <li><a href="ejercicios.html">Ejercicios</a></li>
+            <li><a href="#estructura">Estructura</a></li>
+            <li><a href="#semantica">Semántica</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+            <li><a href="#enlaces">Enlaces</a></li>
+            <li><a href="#listas">Listas</a></li>
+            <li><a href="#imagenes">Imágenes</a></li>
+            <li><a href="#formularios">Formularios</a></li>
         </ul>
     </nav>
+    
 
-        <!-- ESTRUCTURA BÁSICA -->
-        <section>
-            <h2>¿Qué es HTML?</h2>
-            <p>HTML (HyperText Markup Language) es un <strong>lenguaje de marcado</strong>, NO un lenguaje de programación. Esto significa que no tiene estructuras propias de un lenguaje de programación como variables, ciclos o condicionales.</p>
-            
-            <p>Los documentos HTML se escriben en modo ASCII haciendo uso de cualquier procesador de palabras, independiente del sistema operativo.</p>
-
-            <div class="nota">
-                <strong>Importante:</strong> HTML funciona a través de etiquetas (tags) que permiten la creación de contenido y su formato. Cada etiqueta posee atributos que particularizan su comportamiento.
-            </div>
-        </section>
-
-        <!-- ETIQUETA BODY -->
-        <section>
-            <h2>Estructura del Documento HTML</h2>
-            
-            <h3>Etiqueta &lt;body&gt;</h3>
-            <p>Es la etiqueta que define casi toda la página. Los cambios en los atributos del <code>&lt;body&gt;</code> afectan a toda la página.</p>
-
-            <div class="ejemplo">
-                <h4>Ejemplo de estructura básica:</h4>
-                <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="es"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Mi Primera Página&lt;/title&gt;
-&lt;/head&gt;
-&lt;body bgcolor="#0300A0"&gt;
-    &lt;!-- El fondo será azul --&gt;
-    &lt;h1&gt;Bienvenido&lt;/h1&gt;
-    &lt;p&gt;Este es mi primer documento HTML&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-            </div>
-
-            <h4>Atributos comunes del body:</h4>
-            <ul>
-                <li><code>bgcolor</code>: Define el color de fondo (en formato hexadecimal)</li>
-                <li><code>background</code>: Permite colocar una imagen de fondo (requiere ruta)</li>
-            </ul>
-
-            <h3>Colores en Formato Hexadecimal (RGB)</h3>
-            <p>Los colores en HTML utilizan formato RGB en hexadecimal. Cada color se representa con 6 caracteres precedidos por #.</p>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Código Hex</th>
-                        <th>Nombre</th>
-                        <th>Código Hex</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>black</td><td>#000000</td><td>white</td><td>#FFFFFF</td></tr>
-                    <tr><td>red</td><td>#FF0000</td><td>lime</td><td>#00FF00</td></tr>
-                    <tr><td>blue</td><td>#0000FF</td><td>yellow</td><td>#FFFF00</td></tr>
-                    <tr><td>navy</td><td>#000080</td><td>teal</td><td>#008080</td></tr>
-                    <tr><td>purple</td><td>#800080</td><td>olive</td><td>#88AA00</td></tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- ELEMENTOS ESTRUCTURALES -->
-        <section>
-            <h2>Elementos Estructurales HTML5</h2>
-
-            <h3>Etiqueta &lt;span&gt;</h3>
-            <p>Se utiliza para crear un "bloque" dentro del párrafo, donde se puede asignar un estilo diferente al del párrafo.</p>
-            
-            <div class="ejemplo">
-                <h4>Ejemplo:</h4>
-                <pre><code>&lt;p&gt;Este es un texto normal con un 
-&lt;span style="color: red;"&gt;texto rojo&lt;/span&gt; dentro.&lt;/p&gt;</code></pre>
-            </div>
-
-            <h3>Etiqueta &lt;iframe&gt;</h3>
-            <p>Se utiliza para incrustar contenido de otra fuente, generalmente de otros sitios web.</p>
-            
-            <div class="ejemplo">
-                <h4>Ejemplo:</h4>
-                <pre><code>&lt;iframe src="https://www.ejemplo.com" 
-        width="600" 
-        height="400"&gt;
-&lt;/iframe&gt;</code></pre>
-            </div>
-        </section>
-
-        <!-- ELEMENTOS SEMÁNTICOS -->
-        <section>
-            <h2>Elementos Semánticos HTML5</h2>
-            <p>Elementos que ayudan a los navegadores (mediante <em>spiderbots</em>) a identificar los contenidos de la página. Se definen mediante etiquetas que dotan al documento de sentido en su estructura.</p>
-
-            <h3>&lt;header&gt; - Encabezado</h3>
-            <p>Especifica un encabezado dentro de un documento o sección.</p>
-            <div class="ejemplo">
-                <pre><code>&lt;header&gt;
-    &lt;h1&gt;Título Principal&lt;/h1&gt;
-    &lt;p&gt;Descripción del sitio&lt;/p&gt;
-&lt;/header&gt;</code></pre>
-            </div>
-
-            <h3>&lt;nav&gt; - Navegación</h3>
-            <p>Especifica un conjunto de vínculos de navegación. Es una forma de agrupar opciones de navegación tipo menú o mapas de sitio.</p>
-
-            <div class="ejemplo">
-                <h4>Sintaxis:</h4>
-                <pre><code>&lt;nav&gt;
-    &lt;ul&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Principal&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Fotos&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
+    <section id="estructura">
+        <h2>Estructura Básica de HTML</h2>
+        <p>HTML funciona a través de <strong>etiquetas (tags)</strong> que permiten la creación de contenido y su formato. Los documentos HTML se escriben en modo ASCII usando cualquier procesador de texto.</p>
+        
+        <h3>Caracteres Especiales</h3>
+        <p>Los caracteres <code>&lt;</code> y <code>&gt;</code> son especiales. Para escribirlos como texto, usa <code>&amp;lt;</code> y <code>&amp;gt;</code></p>
+        
+        <table>
+            <tr>
+                <th>Carácter</th>
+                <th>Código</th>
+                <th>Carácter</th>
+                <th>Código</th>
+            </tr>
+            <tr>
+                <td>á</td>
+                <td>&amp;aacute;</td>
+                <td>é</td>
+                <td>&amp;eacute;</td>
+            </tr>
+            <tr>
+                <td>í</td>
+                <td>&amp;iacute;</td>
+                <td>ó</td>
+                <td>&amp;oacute;</td>
+            </tr>
+            <tr>
+                <td>ú</td>
+                <td>&amp;uacute;</td>
+                <td>ñ</td>
+                <td>&amp;ntilde;</td>
+            </tr>
+            <tr>
+                <td>¿</td>
+                <td>&amp;iquest;</td>
+                <td>¡</td>
+                <td>&amp;iexcl;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&amp;nbsp;</td>
+                <td>&copy;</td>
+                <td>&amp;copy;</td>
+            </tr>
+        </table>
+        
+        <h3>Etiqueta &lt;body&gt;</h3>
+        <p>Define casi toda la página. Los cambios en los atributos del body afectan a toda la página.</p>
+        <pre><code>&lt;body bgcolor="#0300A0" background="imagen.jpg"&gt;
+Contenido de la página
+&lt;/body&gt;</code></pre>
+        
+        <h3>Comentarios</h3>
+        <p>Líneas que el navegador no muestra, útiles para edición:</p>
+        <pre><code>&lt;!-- Esto es un comentario --&gt;</code></pre>
+        
+        <h3>Saltos de Línea</h3>
+        <p>La etiqueta <code>&lt;br&gt;</code> genera un salto de línea.</p>
+        <p>La etiqueta <code>&lt;pre&gt;</code> permite texto preformateado que respeta espacios y saltos.</p>
+    </section>
+    
+    <section id="semantica">
+        <h2>Elementos Semánticos HTML5</h2>
+        <p>Elementos que ayudan a los navegadores a identificar el contenido de la página mediante etiquetas con significado.</p>
+        
+        <h3>&lt;header&gt;</h3>
+        <p>Especifica un encabezado dentro de un documento o sección.</p>
+        
+        <h3>&lt;nav&gt;</h3>
+        <p>Especifica un conjunto de vínculos de navegación.</p>
+        <pre><code>&lt;nav&gt;
+&lt;ul&gt;
+    &lt;li&gt;Principal&lt;/li&gt;
+    &lt;li&gt;Fotos&lt;/li&gt;
+    &lt;li&gt;Contacto&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/nav&gt;</code></pre>
-                <p><strong>Donde:</strong></p>
-                <ul>
-                    <li><code>&lt;ul&gt;</code>: unordered list (lista no ordenada)</li>
-                    <li><code>&lt;li&gt;</code>: list item (elemento de lista)</li>
-                </ul>
-            </div>
-
-            <h3>&lt;section&gt; - Sección</h3>
-            <p>Define secciones en el documento como capítulos, encabezados, pies de página, etc.</p>
-            <div class="ejemplo">
-                <pre><code>&lt;section&gt;
-    &lt;h2&gt;Título de la sección&lt;/h2&gt;
-    &lt;p&gt;Contenido de la sección...&lt;/p&gt;
-&lt;/section&gt;</code></pre>
-            </div>
-
-            <h3>&lt;aside&gt; - Contenido Lateral</h3>
-            <p>Define contenido al margen del contenido principal.</p>
-            <div class="ejemplo">
-                <pre><code>&lt;aside&gt;
-    &lt;h3&gt;Información adicional&lt;/h3&gt;
-    &lt;p&gt;Contenido complementario...&lt;/p&gt;
-&lt;/aside&gt;</code></pre>
-            </div>
-
-            <h3>&lt;article&gt; - Artículo</h3>
-            <p>Permite especificar contenido independiente o autónomo que debería tener sentido por sí mismo.</p>
-
-            <div class="nota">
-                <strong>Usos comunes:</strong>
-                <ul>
-                    <li>Posts de blogs</li>
-                    <li>Noticias</li>
-                    <li>Comentarios de usuarios</li>
-                    <li>Artículos de foros</li>
-                </ul>
-            </div>
-
-            <div class="ejemplo">
-                <pre><code>&lt;article&gt;
-    &lt;h2&gt;Título del artículo&lt;/h2&gt;
-    &lt;p&gt;Contenido del artículo...&lt;/p&gt;
-    &lt;footer&gt;
-        &lt;p&gt;Autor: Juan Pérez&lt;/p&gt;
-    &lt;/footer&gt;
-&lt;/article&gt;</code></pre>
-            </div>
-
-            <h3>&lt;footer&gt; - Pie de Página</h3>
-            <p>Define el pie de página de un documento o sección.</p>
-            
-            <p><strong>Suele contener:</strong></p>
-            <ul>
-                <li>Información del autor</li>
-                <li>Copyright</li>
-                <li>Enlaces a términos y condiciones</li>
-                <li>Información de contacto</li>
-            </ul>
-
-            <div class="ejemplo">
-                <pre><code>&lt;footer&gt;
-    &lt;p&gt;&copy; 2024 Mi Sitio Web&lt;/p&gt;
-    &lt;p&gt;Contacto: info@ejemplo.com&lt;/p&gt;
-&lt;/footer&gt;</code></pre>
-            </div>
-
-            <h3>&lt;figure&gt; y &lt;figcaption&gt;</h3>
-            <p>Especifica contenido como ilustraciones, diagramas, fotos, etc. Se acompaña con <code>&lt;figcaption&gt;</code> para agregar una descripción.</p>
-
-            <div class="ejemplo">
-                <pre><code>&lt;figure&gt;
-    &lt;img src="logo.png" alt="Logotipo HTML5"&gt;
-    &lt;figcaption&gt;Logotipo oficial de HTML5&lt;/figcaption&gt;
+        
+        <h3>&lt;section&gt;</h3>
+        <p>Define secciones en el documento como capítulos, encabezados, pies de página, etc.</p>
+        
+        <h3>&lt;article&gt;</h3>
+        <p>Permite especificar contenido independiente o autónomo. Útil para foros, noticias, blogs, comentarios, etc.</p>
+        
+        <h3>&lt;aside&gt;</h3>
+        <p>Define contenido al margen del contenido principal.</p>
+        
+        <h3>&lt;footer&gt;</h3>
+        <p>Define el pie de página, que suele contener información del autor, copyright, enlaces, términos, contactos, etc.</p>
+        
+        <h3>&lt;figure&gt; y &lt;figcaption&gt;</h3>
+        <p>Especifica contenido como ilustraciones o diagramas con su denominación.</p>
+        <pre><code>&lt;figure&gt;
+&lt;figcaption&gt;Logotipo HTML5&lt;/figcaption&gt;
+&lt;img src="logo.png" alt="logotipo html5"&gt;
 &lt;/figure&gt;</code></pre>
-            </div>
+        
+        <h3>&lt;time&gt;</h3>
+        <p>Permite fijar una fecha y hora para recordatorio de eventos.</p>
+        <pre><code>&lt;time datetime="2025-11-26"&gt;26 de Noviembre&lt;/time&gt;</code></pre>
+    </section>
+    
+    <section id="multimedia">
+        <h2>Elementos Multimedia</h2>
+        
+        <h3>&lt;audio&gt;</h3>
+        <p>Permite reproducir archivos de audio (MP3, OGG, WAV).</p>
+        
+        <table>
+            <tr>
+                <th>Navegador</th>
+                <th>MP3</th>
+                <th>WAV</th>
+                <th>OGG</th>
+            </tr>
+            <tr>
+                <td>Chrome</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Firefox</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Safari</td>
+                <td>✓</td>
+                <td>✓</td>
+                <td>✗</td>
+            </tr>
+        </table>
+        
+        <pre><code>&lt;audio controls autoplay loop muted&gt;
+&lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;source src="audio.ogg" type="audio/ogg"&gt;
+Tu navegador no soporta audio
+&lt;/audio&gt;</code></pre>
+        
+        <h3>Atributos de &lt;audio&gt;</h3>
+        <ul>
+            <li><strong>autoplay:</strong> Reproduce automáticamente</li>
+            <li><strong>controls:</strong> Muestra controles</li>
+            <li><strong>loop:</strong> Repite el audio</li>
+            <li><strong>muted:</strong> Inicia silenciado</li>
+            <li><strong>preload:</strong> none, auto, metadata</li>
+        </ul>
+        
+        <h3>&lt;video&gt;</h3>
+        <p>Permite desplegar video (MP4, WebM, Ogg).</p>
+        <pre><code>&lt;video controls width="640" height="480" poster="preview.jpg"&gt;
+&lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;source src="video.webm" type="video/webm"&gt;
+Tu navegador no soporta video
+&lt;/video&gt;</code></pre>
+        
+        <h3>&lt;iframe&gt;</h3>
+        <p>Permite incrustar contenido de otra fuente.</p>
+        <pre><code>&lt;iframe src="https://ejemplo.com" width="600" height="400"&gt;&lt;/iframe&gt;</code></pre>
+    </section>
+    
+    <section id="enlaces">
+        <h2>Enlaces y Referencias</h2>
+        
+        <h3>Etiqueta &lt;a&gt;</h3>
+        <p>Crea hipervínculos que llevan a páginas o archivos.</p>
+        <pre><code>&lt;a href="https://ejemplo.com"&gt;Visitar sitio&lt;/a&gt;</code></pre>
+        
+        <h3>Tipos de Referencias</h3>
+        <ul>
+            <li><strong>Absoluta:</strong> Conduce a ubicación externa (http://...)</li>
+            <li><strong>Relativa:</strong> Dentro del mismo sitio</li>
+            <li><strong>Punto de fijación:</strong> A un ancla dentro del documento</li>
+        </ul>
+        
+        <h3>Atributo target</h3>
+        <ul>
+            <li><strong>_blank:</strong> Abre en ventana nueva</li>
+            <li><strong>_self:</strong> Misma ventana (predeterminado)</li>
+            <li><strong>_parent:</strong> Marco padre</li>
+            <li><strong>_top:</strong> Ventana completa</li>
+        </ul>
+        
+        <pre><code>&lt;a href="https://buap.mx" target="_blank"&gt;Visita BUAP&lt;/a&gt;</code></pre>
+        
+        <h3>Anclas</h3>
+        <p>Crear puntos de fijación en el documento:</p>
+        <pre><code>&lt;a name="miancla"&gt;&lt;/a&gt;
+&lt;a href="#miancla"&gt;Ir al ancla&lt;/a&gt;</code></pre>
+        
+        <h3>Enlaces Especiales</h3>
+        <p>Correo electrónico:</p>
+        <pre><code>
+&lt;a href="mailto:correo@ejemplo.com"&gt;Enviar email&lt;/a&gt;
+&lt;a href="mailto:correo@ejemplo.com?subject=Asunto"&gt;Email con asunto&lt;/a&gt;
+        </code></pre>
+        
+        <p>Descarga de archivos:</p>
+        <pre><code>&lt;a href="documento.pdf"&gt;Descargar PDF&lt;/a&gt;</code></pre>
+        
+        <p>Vínculo vacío:</p>
+        <pre><code>&lt;a href="#"&gt;Vínculo vacío&lt;/a&gt;</code></pre>
+    </section>
+    
+    <section id="listas">
+        <h2>Listas</h2>
+        
+        <h3>Listas No Ordenadas &lt;ul&gt;</h3>
+        <pre><code>
+&lt;ul&gt;
+    &lt;li type="disc"&gt;Punto negro&lt;/li&gt;
+    &lt;li type="circle"&gt;Punto círculo&lt;/li&gt;
+    &lt;li type="square"&gt;Punto cuadrado&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        
+        <h3>Listas Ordenadas &lt;ol&gt;</h3>
+        <pre><code>
+&lt;ol&gt;
+    &lt;li&gt;Primer elemento&lt;/li&gt;
+    &lt;li&gt;Segundo elemento&lt;/li&gt;
+    &lt;li&gt;Tercer elemento&lt;/li&gt;
+&lt;/ol&gt;
+        </code></pre>
+        
+        <p>Iniciar en número específico:</p>
+        <pre><code>
+&lt;ol&gt;
+    &lt;li value="20"&gt;Este será el 20&lt;/li&gt;
+    &lt;li&gt;Este será el 21&lt;/li&gt;
+    &lt;li&gt;Este será el 22&lt;/li&gt;
+&lt;/ol&gt;
+        </code></pre>
+    </section>
+    
+    <section id="imagenes">
+        <h2>Imágenes</h2>
+        
+        <h3>Etiqueta &lt;img&gt;</h3>
+        <p>Inserta imágenes en la página. No necesita etiqueta de cierre.</p>
+        <pre><code>&lt;img src="imagenes/foto.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+        
+        <h3>Texto Alternativo (alt)</h3>
+        <p>Se muestra cuando la imagen no puede cargarse.</p>
+        <pre><code>&lt;img src="gato.gif" alt="Imagen de un gato"&gt;</code></pre>
+        
+        <h3>Enlaces con Imágenes</h3>
+        <p>Combinar <code>&lt;a&gt;</code> con <code>&lt;img&gt;</code> para crear imágenes clicables:</p>
+        <pre><code>
+&lt;a href="pagina.html"&gt;
+&lt;img src="imagenes/foto.jpg" alt="Pintura Geométrica"&gt;
+&lt;/a&gt;
+        </code></pre>
+    </section>
+    
+    <section id="formularios">
+        <h2>Formularios</h2>
+        
+        <h3>Estructura Básica</h3>
+        <p>Los formularios recopilan datos del usuario.</p>
+        <pre><code>
+&lt;form action="mailto:correo@servidor.com" method="post" enctype="text/plain"&gt;
+&lt;!-- Elementos del formulario --&gt;
+&lt;/form&gt;
+        </code></pre>
+        
+        <h3>Atributos de &lt;form&gt;</h3>
+        <ul>
+            <li><strong>action:</strong> Dirección de correo o programa que procesará el formulario</li>
+            <li><strong>method:</strong> get o post</li>
+            <li><strong>enctype:</strong> Modo de cifrado para envío</li>
+        </ul>
+        
+        <h3>Área de Texto &lt;textarea&gt;</h3>
+        <pre><code>
+&lt;textarea name="comentario" cols="30" rows="5"&gt;
+Escribe aquí tu texto
+&lt;/textarea&gt;
+        </code></pre>
+        
+        <h3>Elementos de Entrada &lt;input&gt;</h3>
+        <p>Diversos tipos de campos de entrada:</p>
+        <pre><code>
+&lt;input type="text" name="nombre" placeholder="Tu nombre"&gt;
+&lt;input type="email" name="email" placeholder="Tu email"&gt;
+&lt;input type="password" name="password"&gt;
+&lt;input type="submit" value="Enviar"&gt;
+&lt;input type="reset" value="Limpiar"&gt;
+        </code></pre>
+    </section>
+    
+    <a href="tutorial-css.html" class="link-button">Ver Tutorial de CSS</a>
 
-            <h3>&lt;time&gt; - Fecha y Hora</h3>
-            <p>Permite marcar fechas y horas de forma semántica. La fecha usa el calendario gregoriano.</p>
-
-            <div class="ejemplo">
-                <pre><code>&lt;p&gt;La reunión será el 
-&lt;time datetime="2024-12-25T10:00"&gt;
-    25 de diciembre a las 10:00 AM
-&lt;/time&gt;&lt;/p&gt;</code></pre>
-            </div>
-        </section>
-
-        <!-- CARACTERES ESPECIALES -->
-        <section>
-            <h2>Caracteres Especiales</h2>
-            <p>Los caracteres <code>&lt;</code> y <code>&gt;</code> son caracteres especiales que inician y terminan etiquetas. Para escribirlos como texto, hay que usar su representación HTML.</p>
-
-            <div class="nota">
-                <strong>Recordatorio:</strong> HTML solo reconoce un espacio en blanco. Dos espacios seguidos los muestra como uno. Para tener más espacios se utiliza <code>&amp;nbsp;</code>
-            </div>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Carácter</th>
-                        <th>Código HTML</th>
-                        <th>Carácter</th>
-                        <th>Código HTML</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>&lt;</td><td>&amp;lt;</td><td>&gt;</td><td>&amp;gt;</td></tr>
-                    <tr><td>&aacute;</td><td>&amp;aacute;</td><td>&Aacute;</td><td>&amp;Aacute;</td></tr>
-                    <tr><td>&eacute;</td><td>&amp;eacute;</td><td>&Eacute;</td><td>&amp;Eacute;</td></tr>
-                    <tr><td>&iacute;</td><td>&amp;iacute;</td><td>&Iacute;</td><td>&amp;Iacute;</td></tr>
-                    <tr><td>&oacute;</td><td>&amp;oacute;</td><td>&Oacute;</td><td>&amp;Oacute;</td></tr>
-                    <tr><td>&uacute;</td><td>&amp;uacute;</td><td>&Uacute;</td><td>&amp;Uacute;</td></tr>
-                    <tr><td>&ntilde;</td><td>&amp;ntilde;</td><td>&Ntilde;</td><td>&amp;Ntilde;</td></tr>
-                    <tr><td>&uuml;</td><td>&amp;uuml;</td><td>&Uuml;</td><td>&amp;Uuml;</td></tr>
-                    <tr><td>&iquest;</td><td>&amp;iquest;</td><td>&iexcl;</td><td>&amp;iexcl;</td></tr>
-                    <tr><td>&quot;</td><td>&amp;quot;</td><td>&amp;</td><td>&amp;amp;</td></tr>
-                    <tr><td>&copy;</td><td>&amp;copy;</td><td>&reg;</td><td>&amp;reg;</td></tr>
-                    <tr><td>&euro;</td><td>&amp;euro;</td><td>&nbsp;</td><td>&amp;nbsp;</td></tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- FORMATO DE TEXTO -->
-        <section>
-            <h2>Formato de Texto</h2>
-
-            <h3>Comentarios en HTML</h3>
-            <p>Líneas de texto que el navegador no muestra. Sirven para documentar el código.</p>
-            <div class="ejemplo">
-                <pre><code>&lt;!-- Este es un comentario --&gt;
-&lt;p&gt;Este texto sí se verá&lt;/p&gt;
-&lt;!-- Este otro comentario no se verá en el navegador --&gt;</code></pre>
-            </div>
-
-            <h3>Salto de Línea</h3>
-            <p>En HTML, al teclear <code>ENTER/INTRO</code> no genera un salto de línea en el navegador. Para insertar un salto de línea se usa la etiqueta <code>&lt;br&gt;</code>.</p>
-
-            <div class="ejemplo">
-                <pre><code>&lt;p&gt;Primera línea&lt;br&gt;
-Segunda línea&lt;br&gt;
-Tercera línea&lt;/p&gt;</code></pre>
-            </div>
-
-            <div class="nota">
-                <strong>Nota:</strong> <code>&lt;br&gt;</code> es una etiqueta que no requiere cierre.
-            </div>
-
-            <h3>Texto Preformateado &lt;pre&gt;</h3>
-            <p>Esta etiqueta preserva los espacios, saltos de línea y formato tal como aparecen en el código.</p>
-
-            <div class="ejemplo">
-                <pre><code>&lt;pre&gt;
-                    Este    texto    conserva
-                    los   espacios   y
-                    saltos de línea 
-                &lt;/pre&gt;</code></pre>
-            </div>
-
-            <div class="nota">
-                <strong>Limitación:</strong> Dentro de <code>&lt;pre&gt;</code> no se pueden usar etiquetas como <code>&lt;img&gt;</code>, <code>&lt;big&gt;</code>, <code>&lt;small&gt;</code>, <code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code>.
-            </div>
-        </section>
-
-        <a href="../index.html" class="btn-back">← Volver al Inicio</a>
-
+    
     <footer>
-        <p>&copy; 2025 Tutorial HTML5 y CSS3 | HTML Básico</p>
+        <p>&copy; 2025 Tutorial de HTML5 | Desarrollo Web</p>
+        <p>Aprende a crear sitios web modernos</p>
     </footer>
 </body>
 </html>
