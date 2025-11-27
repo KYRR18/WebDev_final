@@ -3,419 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicios - Tutorial HTML5 y CSS3</title>
-    <link rel="stylesheet" href="estilos/ejercicios.css">
+    <meta name="keywords" content="ejercicios, html, css, JavaScript, tutorial">
+    <title>javaScript - Tutorial HTML5 y CSS3</title>
+    <link rel="stylesheet" href="../estilos/html-basico.css">
 </head>
 <body>
     <header>
-        <h1>Ejercicios Prácticos</h1>
-        <p class="subtitle">Pon a prueba tus conocimientos con estos ejercicios</p>
+        <h1>javaScript</h1>
+        <p class="subtitle">Algo que no vimos pero es importante saber</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="html-basico.html">HTML Básico</a></li>
-            <li><a href="html-avanzado.html">HTML Avanzado</a></li>
-            <li><a href="css-fundamentos.html">CSS Fundamentos</a></li>
-            <li><a href="css-estilos.html">CSS Estilos</a></li>
-            <li><a href="ejercicios.html" class="active">Ejercicios</a></li>
+            <li><a href="#Que_es">¿Que es JavaScript?</a></li>
+            <li><a href="#utiliza">¿Para que se utiliza?</a></li>
+            <li><a href="#funcion">¿Como funciona?</a></li>
+            <li><a href="#bibliotecas">Bibliotecas</a></li>
+            <li><a href="#visualizacion">Visualizacion de datos</a></li>
+            <li><a href="#formularios">Formularios</a></li>
         </ul>
     </nav>
 
-    <!-- NIVEL PRINCIPIANTE -->
     <section>
-        <h2>🌱 Nivel Principiante - HTML Básico</h2>
-        <p>Ejercicios para dominar los fundamentos de HTML.</p>
-
-        <article class="exercise-card level-beginner">
-            <div class="exercise-header">
-                <h3>Ejercicio 1: Mi Primera Página Web</h3>
-                <span class="difficulty">⭐ Fácil</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Crear una página HTML básica con estructura completa.</p>
-                
-                <h4>📝 Requisitos:</h4>
-                <ul>
-                    <li>Estructura HTML5 completa (<!DOCTYPE>, html, head, body)</li>
-                    <li>Título de la página</li>
-                    <li>Al menos 3 encabezados diferentes (h1, h2, h3)</li>
-                    <li>3 párrafos con texto</li>
-                    <li>Usar caracteres especiales (&aacute;, &ntilde;, etc.)</li>
-                </ul>
-
-                <h4>💡 Pista:</h4>
-                <p>Recuerda usar <code>&lt;meta charset="UTF-8"&gt;</code> en el head.</p>
-            </div>
-        </article>
-
-        <article class="exercise-card level-beginner">
-            <div class="exercise-header">
-                <h3>Ejercicio 2: Página con Listas</h3>
-                <span class="difficulty">⭐ Fácil</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Practicar el uso de listas ordenadas y no ordenadas.</p>
-                
-                <h4>📝 Requisitos:</h4>
-                <ul>
-                    <li>Crear una lista no ordenada con tus 5 películas favoritas</li>
-                    <li>Crear una lista ordenada con los pasos para hacer un café</li>
-                    <li>Anidar una lista dentro de otra</li>
-                </ul>
-
-                <h4>🎯 Bonus:</h4>
-                <p>Usa diferentes tipos de viñetas (disc, circle, square).</p>
-            </div>
-        </article>
-
-        <article class="exercise-card level-beginner">
-            <div class="exercise-header">
-                <h3>Ejercicio 3: Tabla de Datos</h3>
-                <span class="difficulty">⭐⭐ Media</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Crear una tabla con información organizada.</p>
-                
-                <h4>📝 Requisitos:</h4>
-                <ul>
-                    <li>Crear una tabla con al menos 4 columnas y 5 filas</li>
-                    <li>Incluir encabezados de tabla (&lt;th&gt;)</li>
-                    <li>La tabla debe tener borde</li>
-                    <li>Tema sugerido: horario de clases, lista de productos, etc.</li>
-                </ul>
-            </div>
-        </article>
-    </section>
-
-    <!-- NIVEL INTERMEDIO HTML -->
-    <section>
-        <h2>🌿 Nivel Intermedio - HTML Avanzado</h2>
-        <p>Ejercicios con multimedia, enlaces y formularios.</p>
-
-        <article class="exercise-card level-intermediate">
-            <div class="exercise-header">
-                <h3>Ejercicio 4: Página con Enlaces</h3>
-                <span class="difficulty">⭐⭐ Media</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Dominar los diferentes tipos de enlaces.</p>
-                
-                <h4>📝 Requisitos:</h4>
-                <ul>
-                    <li>3 enlaces externos que abran en nueva pestaña</li>
-                    <li>2 enlaces internos a otras páginas de tu sitio</li>
-                    <li>2 anclas que lleven a secciones de la misma página</li>
-                    <li>1 enlace de email con asunto prellenado</li>
-                </ul>
-            </div>
-        </article>
-
-        <article class="exercise-card level-intermediate">
-            <div class="exercise-header">
-                <h3>Ejercicio 5: Galería de Imágenes</h3>
-                <span class="difficulty">⭐⭐ Media</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Crear una galería de imágenes con enlaces.</p>
-                
-                <h4>📝 Requisitos:</h4>
-                <ul>
-                    <li>Al menos 6 imágenes organizadas</li>
-                    <li>Cada imagen debe tener atributo alt descriptivo</li>
-                    <li>Usar &lt;figure&gt; y &lt;figcaption&gt;</li>
-                    <li>Las imágenes deben ser clicables y abrir en tamaño completo</li>
-                </ul>
-            </div>
-        </article>
-
-        <article class="exercise-card level-intermediate">
-            <div class="exercise-header">
-                <h3>Ejercicio 6: Formulario de Contacto</h3>
-                <span class="difficulty">⭐⭐⭐ Difícil</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Crear un formulario funcional completo.</p>
-                
-                <h4>📝 Requisitos:</h4>
-                <ul>
-                    <li>Campos: nombre, email, teléfono, mensaje</li>
-                    <li>Radio buttons para género</li>
-                    <li>Checkbox para aceptar términos</li>
-                    <li>Lista desplegable para país</li>
-                    <li>Área de texto para comentarios</li>
-                    <li>Botones de enviar y limpiar</li>
-                    <li>Usar atributos required y placeholder</li>
-                </ul>
-            </div>
-        </article>
-    </section>
-
-    <!-- NIVEL PRINCIPIANTE CSS -->
-    <section>
-        <h2>🎨 Nivel Principiante - CSS Básico</h2>
-        <p>Ejercicios para aprender a aplicar estilos.</p>
-
-        <article class="exercise-card level-beginner">
-            <div class="exercise-header">
-                <h3>Ejercicio 7: Primeros Estilos</h3>
-                <span class="difficulty">⭐ Fácil</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Aplicar estilos básicos usando archivo CSS externo.</p>
-                
-                <h4>📝 Requisitos:</h4>
-                <ul>
-                    <li>Crear archivo HTML y CSS separados</li>
-                    <li>Vincular el CSS al HTML</li>
-                    <li>Cambiar color de fondo del body</li>
-                    <li>Cambiar color y tamaño de todos los h1</li>
-                    <li>Estilizar todos los párrafos (color, tamaño de fuente)</li>
-                </ul>
-            </div>
-        </article>
-
-        <article class="exercise-card level-beginner">
-            <div class="exercise-header">
-                <h3>Ejercicio 8: Selectores CSS</h3>
-                <span class="difficulty">⭐⭐ Media</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Practicar diferentes tipos de selectores.</p>
-                
-                <h4>📝 Requisitos:</h4>
-                <ul>
-                    <li>Usar al menos 2 selectores por ID</li>
-                    <li>Usar al menos 3 selectores por clase</li>
-                    <li>Usar selectores de elemento</li>
-                    <li>Usar selector universal (*)</li>
-                    <li>Combinar selectores (ej: div.clase, p#id)</li>
-                </ul>
-            </div>
-        </article>
-
-        <article class="exercise-card level-beginner">
-            <div class="exercise-header">
-                <h3>Ejercicio 9: Modelo de Caja</h3>
-                <span class="difficulty">⭐⭐ Media</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Comprender y aplicar el modelo de caja.</p>
-                
-                <h4>📝 Requisitos:</h4>
-                <ul>
-                    <li>Crear 3 cajas (divs) con contenido</li>
-                    <li>Aplicar padding diferente a cada una</li>
-                    <li>Aplicar margin diferente a cada una</li>
-                    <li>Agregar bordes con diferentes estilos</li>
-                    <li>Usar box-sizing: border-box</li>
-                </ul>
-            </div>
-        </article>
-    </section>
-
-    <!-- NIVEL INTERMEDIO CSS -->
-    <section>
-        <h2>🎨 Nivel Intermedio - CSS Avanzado</h2>
-        <p>Ejercicios con fuentes, colores y efectos visuales.</p>
-
-        <article class="exercise-card level-intermediate">
-            <div class="exercise-header">
-                <h3>Ejercicio 10: Tipografía Web</h3>
-                <span class="difficulty">⭐⭐ Media</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Trabajar con diferentes propiedades de texto.</p>
-                
-                <h4>📝 Requisitos:</h4>
-                <ul>
-                    <li>Importar 2 fuentes de Google Fonts</li>
-                    <li>Aplicar diferentes font-weight (300, 400, 700)</li>
-                    <li>Usar text-transform en diferentes elementos</li>
-                    <li>Aplicar letter-spacing y line-height</li>
-                    <li>Crear al menos 3 estilos de texto diferentes</li>
-                </ul>
-            </div>
-        </article>
-
-        <article class="exercise-card level-intermediate">
-            <div class="exercise-header">
-                <h3>Ejercicio 11: Colores y Fondos</h3>
-                <span class="difficulty">⭐⭐ Media</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Experimentar con colores y fondos.</p>
-                
-                <h4>📝 Requisitos:</h4>
-                <ul>
-                    <li>Crear una paleta de 5 colores usando variables CSS</li>
-                    <li>Usar colores en formato hex, rgb y hsl</li>
-                    <li>Aplicar 2 gradientes lineales diferentes</li>
-                    <li>Aplicar 1 gradiente radial</li>
-                    <li>Usar background-image con una imagen</li>
-                </ul>
-            </div>
-        </article>
-
-        <article class="exercise-card level-intermediate">
-            <div class="exercise-header">
-                <h3>Ejercicio 12: Tarjetas con Estilo</h3>
-                <span class="difficulty">⭐⭐⭐ Difícil</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Crear tarjetas (cards) profesionales.</p>
-                
-                <h4>📝 Requisitos:</h4>
-                <ul>
-                    <li>Crear 4 tarjetas con imagen, título y descripción</li>
-                    <li>Usar border-radius para esquinas redondeadas</li>
-                    <li>Aplicar box-shadow</li>
-                    <li>Agregar efecto hover que cambie la sombra</li>
-                    <li>Las tarjetas deben estar en una cuadrícula</li>
-                    <li>Debe ser responsive (usar media queries)</li>
-                </ul>
-            </div>
-        </article>
-    </section>
-
-    <!-- PROYECTOS FINALES -->
-    <section>
-        <h2>🏆 Proyectos Finales</h2>
-        <p>Proyectos completos que integran todo lo aprendido.</p>
-
-        <article class="exercise-card level-advanced">
-            <div class="exercise-header">
-                <h3>Proyecto 1: Página Personal/CV</h3>
-                <span class="difficulty">⭐⭐⭐ Avanzado</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Crear un sitio web personal o CV online completo.</p>
-                
-                <h4>📝 Debe incluir:</h4>
-                <ul>
-                    <li>Header con navegación</li>
-                    <li>Sección "Sobre mí" con foto y descripción</li>
-                    <li>Sección de habilidades con barras de progreso</li>
-                    <li>Portfolio/proyectos con tarjetas</li>
-                    <li>Formulario de contacto funcional</li>
-                    <li>Footer con enlaces a redes sociales</li>
-                    <li>Diseño completamente responsive</li>
-                    <li>Efectos hover y transiciones</li>
-                </ul>
-
-                <h4>🎯 Bonus:</h4>
-                <p>Agregar animaciones CSS y un tema oscuro/claro.</p>
-            </div>
-        </article>
-
-        <article class="exercise-card level-advanced">
-            <div class="exercise-header">
-                <h3>Proyecto 2: Landing Page de Producto</h3>
-                <span class="difficulty">⭐⭐⭐ Avanzado</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Crear una landing page atractiva para un producto o servicio.</p>
-                
-                <h4>📝 Debe incluir:</h4>
-                <ul>
-                    <li>Hero section con imagen de fondo y CTA</li>
-                    <li>Sección de características con iconos</li>
-                    <li>Testimonios de clientes</li>
-                    <li>Tabla de precios con 3 planes</li>
-                    <li>Sección de FAQ (preguntas frecuentes)</li>
-                    <li>Formulario de registro/newsletter</li>
-                    <li>Diseño moderno y profesional</li>
-                    <li>Optimizado para móvil</li>
-                </ul>
-            </div>
-        </article>
-
-        <article class="exercise-card level-advanced">
-            <div class="exercise-header">
-                <h3>Proyecto 3: Blog Personal</h3>
-                <span class="difficulty">⭐⭐⭐ Avanzado</span>
-            </div>
-            <div class="exercise-content">
-                <h4>📋 Objetivo:</h4>
-                <p>Crear un blog con múltiples páginas y artículos.</p>
-                
-                <h4>📝 Debe incluir:</h4>
-                <ul>
-                    <li>Página principal con lista de artículos</li>
-                    <li>Páginas individuales para cada artículo</li>
-                    <li>Sidebar con categorías y artículos recientes</li>
-                    <li>Sección de comentarios</li>
-                    <li>Barra de búsqueda</li>
-                    <li>Página "Acerca de"</li>
-                    <li>Sistema de etiquetas/tags</li>
-                    <li>Diseño limpio y legible</li>
-                </ul>
-            </div>
-        </article>
-    </section>
-
-    <!-- TIPS PARA RESOLVER EJERCICIOS -->
-    <section>
-        <h2>💡 Consejos para Resolver los Ejercicios</h2>
+        <h2>Conceptos Fundamentales</h2>
         
-        <div class="tips-grid">
-            <div class="tip-card">
-                <div class="tip-icon">📝</div>
-                <h3>Planifica Antes de Codificar</h3>
-                <p>Dibuja un boceto o wireframe de tu página antes de empezar a escribir código.</p>
-            </div>
+        <article id="Que_es">
+            <h3>¿Qué es JavaScript?</h3>
+            <p>JavaScript es un lenguaje de programación que los desarrolladores 
+                utilizan para hacer páginas web interactivas. Desde actualizar fuentes 
+                de redes sociales a mostrar animaciones y mapas interactivos, 
+                las funciones de JavaScript pueden mejorar la experiencia del usuario 
+                de un sitio web. Como lenguaje de scripting del lado del servidor, 
+                se trata de una de las principales tecnologías de la World Wide Web. 
+                Por ejemplo, al navegar por Internet, en cualquier momento en el que vea 
+                un carrusel de imágenes, un menú desplegable “click-to-show” 
+                (clic para mostrar), o cambien de manera dinámica los elementos de 
+                color en una página web, estará viendo los efectos de JavaScript.</p>
+        </article>
 
-            <div class="tip-card">
-                <div class="tip-icon">🔍</div>
-                <h3>Usa las Herramientas del Navegador</h3>
-                <p>Abre las DevTools (F12) para inspeccionar elementos y probar cambios en tiempo real.</p>
-            </div>
+        <article id="utiliza">
+            <h3>¿Para qué se utiliza JavaScript?</h3>
+            <p>Anteriormente, las páginas web eran estáticas, similares a las páginas de un libro. 
+                Una página estática mostraba principalmente información en un diseño fijo 
+                y no todo aquello que esperamos de un sitio web moderno. JavaScript surgió 
+                como una tecnología del lado del navegador para hacer que las aplicaciones 
+                web fueran más dinámicas. Por medio de JavaScript, los navegadores eran capaces 
+                de responder a la interacción de los usuarios y cambiar la distribución del contenido 
+                en la página web.</p>
+            <p>A medida que el lenguaje evolucionó, los desarrolladores de JavaScript establecieron 
+                bibliotecas, marcos y prácticas de programación y comenzaron a utilizarlo fuera de 
+                los navegadores web. En la actualidad, puede utilizar JavaScript para el desarrollo 
+                tanto del lado del cliente como del lado del servidor.</p>
+        </article>
 
-            <div class="tip-card">
-                <div class="tip-icon">✅</div>
-                <h3>Valida tu Código</h3>
-                <p>Usa los validadores de W3C para asegurarte de que tu código es correcto.</p>
-            </div>
+        <article id="funcion">
+            <h3>¿Cómo funciona JavaScript?</h3>
+            <p>Todos los lenguajes de programación funcionan mediante
+                 la traducción de sintaxis similar a la del inglés a código de máquina, 
+                 que posteriormente el sistema operativo se encarga de ejecutar.
+                JavaScript se clasifica principalmente como un lenguaje de scripting o interpretado.
+                El código JavaScript es interpretado, es decir, directamente traducido a código 
+                de lenguaje de máquina subyacente mediante un motor de JavaScript. En el caso de 
+                otros lenguajes de programación, un compilador se encarga de compilar todo el 
+                código en código de máquina en un paso diferente. En consecuencia, todos los 
+                lenguajes de scripts son lenguajes de programación, pero no todos los lenguajes 
+                de programación son lenguajes de scripts.</p>
+        </article>
+    </section>
 
-            <div class="tip-card">
-                <div class="tip-icon">📱</div>
-                <h3>Prueba en Diferentes Dispositivos</h3>
-                <p>Verifica que tu sitio se vea bien en móvil, tablet y escritorio.</p>
-            </div>
+    <section id="bibliotecas">
+        <h2>Bibliotecas de JavaScript</h2>
+        <p>Las bibliotecas de JavaScript son colecciones de fragmentos 
+            de código escritos previamente que los desarrolladores web 
+            pueden volver a utilizar para realizar funciones estándar de 
+            JavaScript. El código de la biblioteca de JavaScript se conecta 
+            al resto de código del proyecto según sea necesario. Si se concibe 
+            el código de una aplicación JavaScript como una casa, las bibliotecas 
+            de JavaScript se asemejan a los muebles ya fabricados que los 
+            desarrolladores pueden utilizar para mejorar la funcionalidad de la casa.</p>
+        
+        <div>
+            <article id="visualizacion">
+                <h3>Visualización de datos</h3>
+                <p>La visualización de datos es fundamental para que los usuarios 
+                    puedan ver estadísticas, por ejemplo, en el panel de administrador 
+                    o en otros paneles y métricas de rendimiento.</p>
+                <p>Bibliotecas como Chart.js, ApexCharts y Algolia Places cuentan con funciones integradas 
+                    que puede utilizar para crear aplicaciones web que muestren datos en gráficos y mapas.</p>
+            </article>
 
-            <div class="tip-card">
-                <div class="tip-icon">🎨</div>
-                <h3>Inspira-te en Otros Sitios</h3>
-                <p>Mira otros sitios web para obtener ideas de diseño y layout.</p>
-            </div>
+            <article>
+                <h3>Manipulación de DOM</h3>
+                <p>Puede utilizar bibliotecas, como jQuery y Umbrella JS, para facilitar el desarrollo web, 
+                    ya que brindan código para funciones estándar de sitios web, como animaciones de menús, 
+                    galerías de imágenes, botones, lightboxes y mucho más.</p>
+            </article>
 
-            <div class="tip-card">
-                <div class="tip-icon">🔄</div>
-                <h3>Itera y Mejora</h3>
-                <p>No esperes perfección en el primer intento. Refina tu trabajo gradualmente.</p>
-            </div>
+            <article id="formularios">
+                <h3>Formularios</h3>
+                <p>En todo desarrollo web se utilizan formularios para que los visitantes del sitio web se pongan en 
+                    contacto con alguien, pidan productos y se inscriban en eventos. Algunas bibliotecas de JavaScript, 
+                    como wForms, LiveValidation, Validanguage y qForms, simplifican las funciones de 
+                    formulario, como la validación, el diseño, las condiciones y la transformación.</p>
+            </article>
+
+            <article>
+                <h3>Funciones matemáticas y de texto</h3>
+                <p>Varias aplicaciones web tienen que resolver ecuaciones matemáticas 
+                    y procesar fechas, horas y texto. En lugar de enviar todas esas solicitudes al servidor, 
+                    manejar algunas en el lado del cliente es más eficiente. Para ello, los desarrolladores 
+                    web utilizan bibliotecas de JavaScript, como Date.js, Sylvester y JavaScript 
+                        URL Library.</p>
+            </article>
         </div>
     </section>
-
+    </aside>
+    <main>
     <a href="../index.html" class="btn-back">← Volver al Inicio</a>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Tutorial HTML5 y CSS3 | Ejercicios Prácticos</p>
+        <p>&copy; 2024 Tutorial HTML5 y CSS3 | javaScript</p>
     </footer>
 </body>
 </html>
