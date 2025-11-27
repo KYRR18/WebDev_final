@@ -166,6 +166,12 @@ footer p {
     color: #666;
 }
 
+#Que_es h3, #utiliza h3, #funcion h3, #bibliotecas h3,#visualizacion h3,
+#formularios h3{
+    color: #9e873d;
+    
+}
+
 .link-button {
     display: inline-block;
     margin-top: 2rem;
